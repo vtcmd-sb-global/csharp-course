@@ -12,6 +12,7 @@ nav:
       - Session 01 — C# Fundamentals: sessions/session-01.md
       - Session 02 — Variables & Data Types: sessions/session-02.md
       - Session 03 — Conditions: sessions/session-03.md
+      - Session 04 - Loops & Iteration: sessions/session-04.md
 
   - Exercises:
       - Session 01 Exercises: exercises/session-01.md

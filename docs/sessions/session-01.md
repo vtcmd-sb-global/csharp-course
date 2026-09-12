@@ -440,5 +440,5 @@ I live in Karachi.
 8. What is the difference between `Write()` and `WriteLine()`?
 9. What is string interpolation?
 10. What symbol is used for a single-line comment?
-Name the main files/folders you get when you create a new console project.
-Why do modern projects often have only `Program.cs` instead of both `Program.cs` and `Startup.cs`?
+11. Name the main files/folders you get when you create a new console project.
+12. Why do modern projects often have only `Program.cs` instead of both `Program.cs` and `Startup.cs`?

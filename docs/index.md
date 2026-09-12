@@ -1,6 +1,6 @@
-# C# Programming Course
+# Proficient Programming with C#
 
-Welcome to the **C# Programming Course**.
+Welcome to the **C# (C-Sharp) Course**.
 
 This course takes you from C# fundamentals to advanced C# and professional application development.
 
@@ -67,3 +67,4 @@ Start with:
 - [Session 01 — C# Fundamentals](sessions/session-01.md)
 - [Session 02 — Variables & Data Types](sessions/session-02.md)
 - [Session 03 — Conditions](sessions/session-03.md)
+- [Session 04 — Loops & Iterations](sessions/session-04.md)

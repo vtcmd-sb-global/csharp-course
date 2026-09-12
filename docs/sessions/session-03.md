@@ -465,33 +465,3 @@ Create a **Simple ATM Program** with the following menu:
 10. When is `switch` useful?
 11. What is the conditional operator?
 12. What is a nested `if`?
-
----
-
-## Instructor Notes
-
-Spend significant time on **logic translation**.
-
-Students should be able to convert this:
-
-```text
-If marks are greater than or equal to 50,
-the student passes.
-Otherwise,
-the student fails.
-```
-
-into this:
-
-```csharp
-if (marks >= 50)
-{
-    Console.WriteLine("Pass");
-}
-else
-{
-    Console.WriteLine("Fail");
-}
-```
-
-This logical translation skill is more important than memorizing syntax.

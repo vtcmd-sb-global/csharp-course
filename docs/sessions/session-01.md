@@ -330,29 +330,3 @@ I live in Karachi.
 8. What is the difference between `Write()` and `WriteLine()`?
 9. What is string interpolation?
 10. What symbol is used for a single-line comment?
-
----
-
-## Instructor Notes (for teachers)
-
-- Do **not** overload students with .NET internals.
-- Main goal of this session:
-
-```text
-"I can create and run a C# program."
-```
-
----
-
-## Suggested 2-Hour Class Flow
-
-| Time       | Activity                  |
-|------------|---------------------------|
-| 0–10 min   | Introduction to course    |
-| 10–25 min  | C# and .NET               |
-| 25–45 min  | First C# program          |
-| 45–65 min  | Output and comments       |
-| 65–85 min  | User input                |
-| 85–105 min | Live coding exercise      |
-| 105–115 min| Student challenge         |
-| 115–120 min| Quiz / recap              |

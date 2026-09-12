@@ -300,17 +300,3 @@ Final Amount: 4500
 8. What is a constant?
 9. What does `%` do?
 10. Difference between `Parse()` and `TryParse()`?
-
----
-
-## Instructor Notes
-
-Make sure students clearly understand the difference between:
-
-```text
-Data Type
-Variable
-Value
-```
-
-before moving forward.

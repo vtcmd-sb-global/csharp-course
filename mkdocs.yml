@@ -1,5 +1,5 @@
 site_name: Proficient Programming with C#
-site_description: C# Course — Beginner to Advanced
+site_description: C# (C-Sharp) Course — Beginner to Advanced
 site_author: Sir Aousaja
 
 theme:
@@ -13,10 +13,8 @@ nav:
       - Session 02 — Variables & Data Types: sessions/session-02.md
       - Session 03 — Conditions: sessions/session-03.md
       - Session 04 - Loops & Iteration: sessions/session-04.md
+      - Session 05 - Methods, Parameters & Recursion: sessions/session-05.md
 
   - Exercises:
       - Session 01 Exercises: exercises/session-01.md
       - Session 04 Exercises: exercises/session-04.md
-
-  - Assignments:
-      - Session 01 Assignment: assignments/session-01.md

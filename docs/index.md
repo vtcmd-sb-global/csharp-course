@@ -68,3 +68,4 @@ Start with:
 - [Session 02 — Variables & Data Types](sessions/session-02.md)
 - [Session 03 — Conditions](sessions/session-03.md)
 - [Session 04 — Loops & Iterations](sessions/session-04.md)
+- [Session 05 — Methods, Parameters & Recursion](sessions/session-05.md)

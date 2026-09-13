@@ -14,6 +14,7 @@ nav:
       - Session 03 — Conditions: sessions/session-03.md
       - Session 04 - Loops & Iteration: sessions/session-04.md
       - Session 05 - Methods, Parameters & Recursion: sessions/session-05.md
+      - Session 06 - Arrays & Strings: sessions/session-06.md
 
   - Exercises:
       - Session 01 Exercises: exercises/session-01.md

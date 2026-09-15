@@ -20,7 +20,7 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: ' http://vtcmd-sb-global.github.io/',
+  url: 'https://vtcmd-sb-global.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/csharp-course/',
@@ -29,7 +29,7 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'vtcmd-sb-global', // Usually your GitHub org/user name.
   projectName: 'csharp-course', // Usually your repo name.
-
+  trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   

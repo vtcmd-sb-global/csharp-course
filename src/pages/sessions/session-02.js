@@ -361,6 +361,10 @@ Final Amount: 4500`}</code>
             <li>What does <code>%</code> do?</li>
             <li>Difference between <code>Parse()</code> and <code>TryParse()</code>?</li>
           </ol>
+
+          <hr />
+
+          <p><strong>Next up (Session 03):</strong> Conditions.</p>
         </article>
       </CustomLayout>
     </Layout>

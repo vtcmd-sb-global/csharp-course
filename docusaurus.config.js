@@ -42,6 +42,18 @@ const config = {
     ({
       // Replace with project's social card
       image: 'img/docusaurus-social-card.jpg',
+      metadata: [
+        {
+          name: 'description',
+          content:
+            'Free C# programming course for beginners. Learn C# fundamentals, OOP, LINQ, SQL Server, ASP.NET Core, Web API and professional application development.'
+        },
+        {
+          name: 'keywords',
+          content:
+            'C#, C Sharp, C# tutorial, learn C#, C# beginners, C# programming, .NET, ASP.NET Core'
+        }
+      ],
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,

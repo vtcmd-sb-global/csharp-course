@@ -408,6 +408,10 @@ I live in Karachi.`}</code>
             <li>Name the main files/folders you get when you create a new console project.</li>
             <li>Why do modern projects often have only Program.cs instead of both Program.cs and Startup.cs?</li>
           </ol>
+          
+          <hr />
+
+          <p><strong>Next up (Session 02):</strong> Variables & Datatypes.</p>
         </article>
       </CustomLayout>
     </Layout>

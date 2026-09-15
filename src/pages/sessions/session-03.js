@@ -483,6 +483,9 @@ Below 50 → F`}</code>
             <li>What is the conditional operator?</li>
             <li>What is a nested <code>if</code>?</li>
           </ol>
+          <hr />
+
+          <p><strong>Next up (Session 04):</strong> Loops & Iterations.</p>
         </article>
       </CustomLayout>
     </Layout>

@@ -692,20 +692,6 @@ finally
 
           <hr />
 
-          <h2>11. Session 7 Summary</h2>
-          <p>You learned:</p>
-          <ul>
-            <li>All 5 parameter modes: <code>value</code>, <code>ref</code>, <code>out</code>, <code>in</code>, <code>params</code></li>
-            <li>Returning multiple values with <strong>tuples</strong> and <strong><code>out</code></strong></li>
-            <li>Variable <strong>scope</strong> and <strong>lifetime</strong></li>
-            <li>What <code>static</code> means (bridge to Session 08)</li>
-            <li>Exception handling: <code>try/catch/finally</code>, <code>throw</code></li>
-            <li><code>throw;</code> vs <code>throw ex;</code></li>
-            <li><strong>Custom exceptions</strong></li>
-            <li>Defensive input with <code>TryParse</code></li>
-            <li>Exception filters with <code>when</code></li>
-          </ul>
-
           <p><strong>Next up (Session 08):</strong> Object-Oriented Programming — Classes, Objects, Fields, Properties, Constructors, and Encapsulation.</p>
         </article>
       </CustomLayout>

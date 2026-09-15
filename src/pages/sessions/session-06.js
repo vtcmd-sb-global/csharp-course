@@ -386,6 +386,9 @@ for (int i = 0; i < 2; i++)
             <li>What is the difference between <code>IndexOf</code> and <code>Contains</code>?</li>
             <li>Why do we usually prefer <code>foreach</code> when we only need to read values?</li>
           </ol>
+          <hr />
+
+          <p><strong>Next up (Session 07):</strong> Advanced Parameters, Tuple & Exception Handling.</p>
         </article>
       </CustomLayout>
     </Layout>

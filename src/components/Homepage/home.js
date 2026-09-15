@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "@docusaurus/Link";
 
 const HomePage = () => {
   return (
@@ -92,25 +93,43 @@ const HomePage = () => {
           <p>Start with:</p>
           <ul>
             <li>
-              <a href="/sessions/session-01/">Session 01 — C# Fundamentals</a>
+              <Link to="/sessions/session-01">
+                Session 01 — C# Fundamentals
+              </Link>
             </li>
+
             <li>
-              <a href="/sessions/session-02/">
+              <Link to="/sessions/session-02">
                 Session 02 — Variables &amp; Data Types
-              </a>
+              </Link>
             </li>
+
             <li>
-              <a href="/sessions/session-03/">Session 03 — Conditions</a>
+              <Link to="/sessions/session-03">
+                Session 03 — Conditions
+              </Link>
             </li>
+
             <li>
-              <a href="/sessions/session-04/">
+              <Link to="/sessions/session-04">
                 Session 04 — Loops &amp; Iterations
-              </a>
+              </Link>
             </li>
+
             <li>
-              <a href="/sessions/session-05/">
+              <Link to="/sessions/session-05">
                 Session 05 — Methods, Parameters &amp; Recursion
-              </a>
+              </Link>
+            </li>
+          <li>
+              <Link to="/sessions/session-06">
+                Session 06 — Array & Strings
+              </Link>
+            </li>
+          <li>
+              <Link to="/sessions/session-07">
+                Session 07 — Advanced Parameters, Tuples & Exception Handling
+              </Link>
             </li>
           </ul>
         </section>

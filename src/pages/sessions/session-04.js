@@ -534,6 +534,9 @@ while (running)
             <li>What is a nested loop? Give one real-world example.</li>
             <li>Which loop is best for building a menu that should keep showing until the user chooses Exit?</li>
           </ol>
+          <hr />
+
+          <p><strong>Next up (Session 05):</strong> Methods, Parameters & Recursions.</p>
         </article>
       </CustomLayout>
     </Layout>

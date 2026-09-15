@@ -435,6 +435,9 @@ bool IsPass(int marks) => marks >= 50;`}</code>
             <li>When should you prefer recursion over a loop?</li>
             <li>Can a method return more than one value directly? How can we solve this?</li>
           </ol>
+          <hr />
+
+          <p><strong>Next up (Session 06):</strong> Arrays & Strings.</p>
         </article>
       </CustomLayout>
     </Layout>

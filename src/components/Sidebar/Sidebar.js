@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from '@docusaurus/Link';
 import { useLocation } from '@docusaurus/router';
-import { sidebarItems } from './sidebarItems';
+import { sidebarItems } from './SidebarItems';
 import styles from './Sidebar.module.css'; // or use global classes
 
 export default function Sidebar() {

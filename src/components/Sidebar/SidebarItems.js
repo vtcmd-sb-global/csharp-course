@@ -15,11 +15,11 @@ export const sidebarItems = [
       // Add remaining sessions here
     ],
   },
-  {
-    title: "Exercises",
-    children: [
-      { title: "Session 01 Exercises", path: "/exercises/session-01" },
-      { title: "Session 04 Exercises", path: "/exercises/session-04" },
-    ],
-  },
+  //{
+    //title: "Exercises",
+    //children: [
+    // { title: "Session 01 Exercises", path: "/exercises/session-01" },
+    // { title: "Session 04 Exercises", path: "/exercises/session-04" },
+    //],
+  //},
 ];

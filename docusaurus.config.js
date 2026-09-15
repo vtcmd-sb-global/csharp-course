@@ -80,7 +80,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
+      // Replace with project's social card
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
         respectPrefersColorScheme: true,
@@ -124,11 +124,11 @@ const config = {
             label: 'Sessions',
             position: 'left',
           },
-          {
-            to: '/exercises/session-01',
-            label: 'Exercises',
-            position: 'left',
-          },
+          //{
+          //  to: '/exercises/session-01',
+          //  label: 'Exercises',
+          //  position: 'left',
+          //},
         ],
       },
       footer: {

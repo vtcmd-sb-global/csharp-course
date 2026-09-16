@@ -13,6 +13,7 @@ export const sidebarItems = [
       { title: "Session 05 — Methods, Parameters & Recursion", path: "/sessions/session-05" },
       { title: "Session 06 — Arrays & Strings", path: "/sessions/session-06" },
       { title: "Session 07 — Advanced Parameters, Tuples & Exception Handling", path: "/sessions/session-07" },
+      { title: "Session 08 - Classes, Objects, Fields, Properties, Constructors & Encapsulation", path: "/sessions/session-08" }
       // Add remaining sessions here
     ],
   },

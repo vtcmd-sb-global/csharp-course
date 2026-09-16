@@ -62,29 +62,6 @@ const HomePage = () => {
           </ul>
         </section>
 
-        {/* Course Structure */}
-        <section>
-          <h2>Course Structure</h2>
-          <p>
-            The course contains <strong>18 sessions</strong>, with each session
-            lasting approximately <strong>2 hours</strong>.
-          </p>
-        </section>
-
-        {/* Student Expectations */}
-        <section>
-          <h2>Student Expectations</h2>
-          <p>Students are expected to:</p>
-          <ol>
-            <li>Read the lesson material.</li>
-            <li>Type and execute the examples themselves.</li>
-            <li>Complete the exercises.</li>
-            <li>Complete the assignments.</li>
-            <li>Practice outside the classroom.</li>
-            <li>Build the final project.</li>
-          </ol>
-        </section>
-
         <hr />
 
         {/* Sessions */}

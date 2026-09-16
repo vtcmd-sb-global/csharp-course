@@ -41,7 +41,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/social-card.jpg',
       metadata: [
         {
           name: 'description',
@@ -63,7 +63,7 @@ const config = {
         title: 'Proficient Programming with C#',
         logo: {
           alt: 'C# Course Logo',
-          src: 'img/logo.svg', // optional – remove if you don’t have a logo
+          src: 'img/logo.jpg', // optional – remove if you don’t have a logo
         },
         items: [
           {

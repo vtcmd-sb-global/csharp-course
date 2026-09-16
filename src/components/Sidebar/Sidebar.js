@@ -21,27 +21,27 @@ export default function Sidebar() {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="sidebar">
+    <nav className={styles.sidebar}>
       <ul>
         {sidebarItems.map((item) => (
           <li key={item.title}>
             {item.children ? (
               <>
                 <button
-                  className="category-btn"
+                  className={styles.categoryBtn}
                   onClick={() => toggleCategory(item.title)}
                 >
                   {item.title}
                   <span>{openCategories[item.title] ? '▾' : '▸'}</span>
                 </button>
-
+  
                 {openCategories[item.title] && (
-                  <ul className="sub-items">
+                  <ul className={styles.subItems}>
                     {item.children.map((child) => (
                       <li key={child.path}>
                         <Link
                           to={child.path}
-                          className={isActive(child.path) ? 'active' : ''}
+                          className={isActive(child.path) ? styles.active : ''}
                         >
                           {child.title}
                         </Link>
@@ -53,7 +53,7 @@ export default function Sidebar() {
             ) : (
               <Link
                 to={item.path}
-                className={isActive(item.path) ? 'active' : ''}
+                className={isActive(item.path) ? styles.active : ''}
               >
                 {item.title}
               </Link>
@@ -63,4 +63,49 @@ export default function Sidebar() {
       </ul>
     </nav>
   );
+  
+  
+  // return (
+  //   <nav className="sidebar">
+  //     <ul>
+  //       {sidebarItems.map((item) => (
+  //         <li key={item.title}>
+  //           {item.children ? (
+  //             <>
+  //               <button
+  //                 className="category-btn"
+  //                 onClick={() => toggleCategory(item.title)}
+  //               >
+  //                 {item.title}
+  //                 <span>{openCategories[item.title] ? '▾' : '▸'}</span>
+  //               </button>
+
+  //               {openCategories[item.title] && (
+  //                 <ul className="sub-items">
+  //                   {item.children.map((child) => (
+  //                     <li key={child.path}>
+  //                       <Link
+  //                         to={child.path}
+  //                         className={isActive(child.path) ? 'active' : ''}
+  //                       >
+  //                         {child.title}
+  //                       </Link>
+  //                     </li>
+  //                   ))}
+  //                 </ul>
+  //               )}
+  //             </>
+  //           ) : (
+  //             <Link
+  //               to={item.path}
+  //               className={isActive(item.path) ? 'active' : ''}
+  //             >
+  //               {item.title}
+  //             </Link>
+  //           )}
+  //         </li>
+  //       ))}
+  //     </ul>
+  //   </nav>
+  // );
 }

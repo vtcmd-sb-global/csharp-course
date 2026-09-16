@@ -113,6 +113,11 @@ const HomePage = () => {
                 Session 08 — Classes, Objects, Fields, Properties, Constructors & Encapsulation
               </Link>
           </li>
+          <li>
+              <Link to="/sessions/session-09">
+                Session 09 — Inheritance, Method Overriding & protected
+              </Link>
+          </li>
           </ul>
         </section>
       </main>

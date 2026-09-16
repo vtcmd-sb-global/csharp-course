@@ -107,7 +107,12 @@ const HomePage = () => {
               <Link to="/sessions/session-07">
                 Session 07 — Advanced Parameters, Tuples & Exception Handling
               </Link>
-            </li>
+          </li>
+          <li>
+              <Link to="/sessions/session-08">
+                Session 08 — Classes, Objects, Fields, Properties, Constructors & Encapsulation
+              </Link>
+          </li>
           </ul>
         </section>
       </main>

@@ -49,7 +49,7 @@ Objects →  Car1 (Toyota), Car2 (Honda), Car3 (Suzuki)`}</code>
           <hr />
 
           <h2>2. Creating a Class and Object</h2>
-
+          <p> A class defines the structure and behavior of an object. It can contain fields, properties, and methods. An object is an actual instance of a class created using the new keyword. In this example, the Student class stores student information and provides a method to display it.</p>
           <pre>
             <code>{`public class Student
 {
@@ -69,6 +69,7 @@ Objects →  Car1 (Toyota), Car2 (Honda), Car3 (Suzuki)`}</code>
           </pre>
 
           <h3>Creating and Using Objects</h3>
+  <p>After defining a class, we can create objects from it and use those objects to access the class members. Here, a Student object is created, values are assigned to its fields, and the DisplayInfo() method is called to show the student's information.</p>
           <pre>
             <code>{`// Create object
 Student s1 = new Student();
@@ -85,8 +86,12 @@ s1.DisplayInfo();`}</code>
           <hr />
 
           <h2>3. Methods in C#</h2>
+          
+  <p>A method is a block of code that performs a specific task. Methods help organize programs into smaller, reusable pieces of code. A method can accept input through parameters and may return a result.</p>
+          
+  <h3>3.1 Method with No Parameters and No Return Value</h3>
 
-          <h3>3.1 Method with No Parameters and No Return Value</h3>
+  <p>This type of method does not require any input and does not return a value. It simply performs an action when it is called.</p>
           <pre>
             <code>{`public void Greet()
 {
@@ -95,6 +100,8 @@ s1.DisplayInfo();`}</code>
           </pre>
 
           <h3>3.2 Method with Parameters</h3>
+
+  <p>A method can receive values through parameters. Parameters allow the same method to perform its task using different input values.</p>
           <pre>
             <code>{`public void Greet(string name)
 {
@@ -103,6 +110,8 @@ s1.DisplayInfo();`}</code>
           </pre>
 
           <h3>3.3 Method with Return Value</h3>
+<p>A method can perform a calculation or operation and return the result to the code that called it. The return type specifies the type of value the method will return.</p>
+  
           <pre>
             <code>{`public int Add(int a, int b)
 {
@@ -117,7 +126,10 @@ Console.WriteLine(result);   // 30`}</code>
           <hr />
 
           <h2>4. Access Modifiers</h2>
-          <table>
+   
+  <p>Access modifiers control where classes and their members can be accessed from. They are an important part of encapsulation because they help protect data and control how other parts of a program interact with a class.</p>
+  
+  <table>
             <thead>
               <tr>
                 <th>Modifier</th>
@@ -165,8 +177,12 @@ Console.WriteLine(result);   // 30`}</code>
           <hr />
 
           <h2>5. Method Overloading</h2>
+  
           <p>Method overloading means having multiple methods with the <strong>same name</strong> but different parameters.</p>
 
+  <p>Method overloading allows a class to have multiple methods with the same name as long as their parameter lists are different. This makes it possible to perform similar operations with different types or numbers of inputs.
+  </p>
+  
           <pre>
             <code>{`public class Calculator
 {
@@ -198,7 +214,10 @@ Console.WriteLine(calc.Add(1, 2, 3));      // 6`}</code>
           <h2>6. Constructors</h2>
           <p>A constructor is a special method that is automatically called when an object is created.</p>
 
+  <p>A constructor is a special member of a class that is used to initialize an object. It has the same name as the class and is automatically executed when an object is created using new.</p>
+  
           <h3>6.1 Default Constructor</h3>
+  <p>A default constructor is a constructor that does not require any parameters. It can be used to assign initial or default values to an object's fields when the object is created.</p>
           <pre>
             <code>{`public class Student
 {
@@ -216,6 +235,7 @@ Console.WriteLine(calc.Add(1, 2, 3));      // 6`}</code>
           </pre>
 
           <h3>6.2 Parameterized Constructor</h3>
+  <p>A parameterized constructor accepts values as parameters and uses them to initialize an object. This allows an object to be created with specific data from the beginning.</p>
           <pre>
             <code>{`public class Student
 {
@@ -236,6 +256,7 @@ Student s1 = new Student("Ali", 21, "C#");`}</code>
           </pre>
 
           <h3>6.3 Constructor Overloading</h3>
+  <p>Just like methods, constructors can be overloaded. A class can have multiple constructors with different parameter lists, allowing objects to be initialized in different ways.</p>
           <pre>
             <code>{`public class Student
 {
@@ -266,7 +287,7 @@ Student s1 = new Student("Ali", 21, "C#");`}</code>
 
           <h2>7. Destructor</h2>
           <p>A destructor is called automatically when the object is about to be destroyed (rarely used in modern C#).</p>
-
+<p>A destructor is a special member of a class that is associated with object cleanup. In C#, destructors are called by the garbage collector when an object is being reclaimed. They are rarely needed in modern C# because managed resources are normally handled automatically.</p>
           <pre>
             <code>{`public class Student
 {

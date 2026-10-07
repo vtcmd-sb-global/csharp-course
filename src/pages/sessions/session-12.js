@@ -3,6 +3,26 @@ import Layout from '@theme/Layout';
 import CustomLayout from '@site/src/components/Layout/Layout';
 
 export default function Session12() {
+  const codeBlockStyle = {
+    backgroundColor: '#1e1e1e',
+    color: '#d4d4d4',
+    padding: '12px 16px',
+    borderRadius: '6px',
+    fontFamily: 'Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace',
+    fontSize: '0.9rem',
+    overflowX: 'auto',
+    lineHeight: '1.5',
+    margin: '12px 0 24px 0'
+  };
+
+  const inlineCodeStyle = {
+    backgroundColor: '#f4f4f4',
+    color: '#d10057',
+    padding: '2px 6px',
+    borderRadius: '4px',
+    fontFamily: 'Consolas, Monaco, monospace',
+    fontSize: '0.9em'
+  };
   return (
     <Layout
       title="Session 12 — Advanced Concepts in C#"
@@ -10,6 +30,16 @@ export default function Session12() {
     >
       <CustomLayout>
         <article className="session-content">
+        <style>{`
+            article code:not(pre code) {
+              background-color: #f4f4f4;
+              color: #d10057;
+              padding: 2px 6px;
+              border-radius: 4px;
+              font-family: Consolas, Monaco, monospace;
+              font-size: 0.9em;
+            }
+          `}</style>
           <h1>Session 12 — Advanced Concepts in C#</h1>
 
           <p><strong>Duration:</strong> 2 hours</p>
@@ -35,7 +65,7 @@ export default function Session12() {
           <h2>1. Anonymous Methods</h2>
           <p>An anonymous method is a method without a name. It is defined using the <code>delegate</code> keyword.</p>
 
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`// Normal way
 public delegate void PrintDelegate(string message);
 
@@ -52,7 +82,7 @@ print("Hello from Anonymous Method");`}</code>
           <h2>2. Lambda Expressions</h2>
           <p>Lambda expressions are a shorter and modern way to write anonymous methods.</p>
 
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`// Lambda expression
 PrintDelegate print = (msg) => Console.WriteLine(msg);
 print("Hello from Lambda");
@@ -97,7 +127,7 @@ Console.WriteLine(square(5));       // 25`}</code>
             </tbody>
           </table>
 
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`Action<string> greet = name => Console.WriteLine($"Hello {name}");
 greet("Ali");
 
@@ -113,7 +143,7 @@ Console.WriteLine(isEven(10));     // True`}</code>
           <h2>3. Extension Methods</h2>
           <p>Extension methods allow you to add new methods to existing types without modifying them.</p>
 
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`public static class StringExtensions
 {
     public static bool IsCapitalized(this string str)
@@ -144,7 +174,7 @@ Console.WriteLine(name.ToTitleCase());       // Ali`}</code>
           <h2>4. Nullable Types</h2>
           <p>Value types (int, double, bool, etc.) normally cannot be null. Nullable types allow them to hold null.</p>
 
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`int? age = null;               // Nullable int
 double? salary = 45000.50;
 
@@ -167,7 +197,7 @@ Console.WriteLine(finalAge);`}</code>
           <h2>5. Partial Classes and Methods</h2>
           <p>Partial classes allow a class to be split into multiple files.</p>
 
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`// File 1: Student.Part1.cs
 public partial class Student
 {
@@ -190,7 +220,7 @@ public partial class Student
           <h2>6. LINQ Query Expressions (Introduction)</h2>
           <p>LINQ provides a powerful way to query collections.</p>
 
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 // Query Syntax
@@ -208,7 +238,7 @@ foreach (var num in evenNumbers)
           </pre>
 
           <h3>More LINQ Examples</h3>
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`List<string> names = new List<string> { "Ali", "Sara", "Ahmed", "Fatima", "Usman" };
 
 var result = names.Where(n => n.StartsWith("A"))
@@ -224,7 +254,7 @@ foreach (var name in result)
 
           <h2>7. Complete Live Example</h2>
 
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`public static class NumberExtensions
 {
     public static bool IsEven(this int number)

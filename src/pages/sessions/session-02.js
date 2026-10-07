@@ -68,7 +68,7 @@ export default function Session02() {
           <h3>What is a Variable?</h3>
           <p>A variable is a named storage location in memory that holds a value. The value can change during program execution.</p>
 
-          <pre style="codeBlockStyle">
+          <pre style={codeBlockStyle}>
             <code>{`int age = 20;
 string name = "Ali";
 double salary = 45000.50;
@@ -138,7 +138,7 @@ bool isStudent = true;`}</code>
           </table>
 
           <h3>Declaring Variables</h3>
-          <pre style="codeBlockStyle">
+          <pre style={codeBlockStyle}>
             <code>{`// Method 1
 int age;
 age = 22;
@@ -155,13 +155,13 @@ int a = 10, b = 20, c = 30;`}</code>
           <h2>2. Comments in C#</h2>
 
           <h3>Single-line Comment</h3>
-          <pre style="codeBlockStyle">
+          <pre style={codeBlockStyle}>
             <code>{`// This is a single-line comment
 int age = 20; // age of the student`}</code>
           </pre>
 
           <h3>Multi-line Comment</h3>
-          <pre style="codeBlockStyle">
+          <pre style={codeBlockStyle}>
             <code>{`/*
   This is a multi-line comment.
   It can span multiple lines.
@@ -169,7 +169,7 @@ int age = 20; // age of the student`}</code>
           </pre>
 
           <h3>XML Documentation Comment</h3>
-          <pre style="codeBlockStyle">
+          <pre style={codeBlockStyle}>
             <code>{`/// <summary>
 /// This method adds two numbers
 /// </summary>
@@ -189,7 +189,7 @@ int Add(int a, int b)
           <h3>Constant</h3>
           <p>A constant is a value that cannot be changed after it is assigned.</p>
 
-          <pre style="codeBlockStyle">
+          <pre style={codeBlockStyle}>
             <code>{`const double PI = 3.14159;
 const string CompanyName = "Aptech";
 
@@ -197,7 +197,7 @@ const string CompanyName = "Aptech";
           </pre>
 
           <h3>Literals</h3>
-          <pre style="codeBlockStyle">
+          <pre style={codeBlockStyle}>
             <code>{`int number = 100;          // Integer literal
 double price = 99.99;      // Double literal
 float rate = 5.5f;         // Float literal
@@ -212,7 +212,7 @@ bool isActive = true;      // Boolean literal`}</code>
           <h2>4. String Interpolation</h2>
           <p>Modern and preferred way to format strings.</p>
 
-          <pre style="codeBlockStyle">
+          <pre style={codeBlockStyle}>
             <code>{`string name = "Ali";
 int age = 21;
 
@@ -229,7 +229,7 @@ Console.WriteLine($"Next year you will be {age + 1} years old.");`}</code>
           <h2>5. Operators in C#</h2>
 
           <h3>Arithmetic Operators</h3>
-          <pre style="codeBlockStyle">
+          <pre style={codeBlockStyle}>
             <code>{`int a = 10, b = 3;
 
 Console.WriteLine(a + b);  // 13
@@ -240,7 +240,7 @@ Console.WriteLine(a % b);  // 1 (remainder)`}</code>
           </pre>
 
           <h3>Assignment Operators</h3>
-          <pre style="codeBlockStyle">
+          <pre style={codeBlockStyle}>
             <code>{`int x = 10;
 x += 5;   // x = x + 5  → 15
 x -= 3;   // x = x - 3  → 12
@@ -249,7 +249,7 @@ x /= 4;   // x = x / 4  → 6`}</code>
           </pre>
 
           <h3>Comparison Operators</h3>
-          <pre style="codeBlockStyle">
+          <pre style={codeBlockStyle}>
             <code>{`int a = 10, b = 20;
 
 Console.WriteLine(a == b);  // false
@@ -261,7 +261,7 @@ Console.WriteLine(a <= b);  // true`}</code>
           </pre>
 
           <h3>Logical Operators</h3>
-          <pre style="codeBlockStyle">
+          <pre style={codeBlockStyle}>
             <code>{`bool isStudent = true;
 bool hasIdCard = false;
 
@@ -275,7 +275,7 @@ Console.WriteLine(!isStudent);              // false (NOT)`}</code>
           <h2>6. Live Coding Examples</h2>
 
           <h3>Example 1: Simple Calculator</h3>
-          <pre style="codeBlockStyle">
+          <pre style={codeBlockStyle}>
             <code>{`Console.Write("Enter first number: ");
 double num1 = Convert.ToDouble(Console.ReadLine());
 
@@ -289,7 +289,7 @@ Console.WriteLine($"Quotient = {num1 / num2}");`}</code>
           </pre>
 
           <h3>Example 2: Student Details</h3>
-          <pre style="codeBlockStyle">
+          <pre style={codeBlockStyle}>
             <code>{`Console.Write("Enter student name: ");
 string name = Console.ReadLine();
 
@@ -343,7 +343,7 @@ Console.WriteLine($"Result: {(marks >= 50 ? "Pass" : "Fail")}");`}</code>
           </ul>
           <p>Then display the information in this format:</p>
 
-          <pre style="codeBlockStyle">
+          <pre style={codeBlockStyle}>
             <code>{`===============================
        PERSONAL INFORMATION
 ===============================

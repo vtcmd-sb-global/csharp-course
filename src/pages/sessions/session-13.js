@@ -3,6 +3,26 @@ import Layout from '@theme/Layout';
 import CustomLayout from '@site/src/components/Layout/Layout';
 
 export default function Session13() {
+  const codeBlockStyle = {
+    backgroundColor: '#1e1e1e',
+    color: '#d4d4d4',
+    padding: '12px 16px',
+    borderRadius: '6px',
+    fontFamily: 'Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace',
+    fontSize: '0.9rem',
+    overflowX: 'auto',
+    lineHeight: '1.5',
+    margin: '12px 0 24px 0'
+  };
+
+  const inlineCodeStyle = {
+    backgroundColor: '#f4f4f4',
+    color: '#d10057',
+    padding: '2px 6px',
+    borderRadius: '4px',
+    fontFamily: 'Consolas, Monaco, monospace',
+    fontSize: '0.9em'
+  };
   return (
     <Layout
       title="Session 13 — Building Cross-Platform Mobile Apps Using .NET MAUI"
@@ -10,6 +30,16 @@ export default function Session13() {
     >
       <CustomLayout>
         <article className="session-content">
+        <style>{`
+            article code:not(pre code) {
+              background-color: #f4f4f4;
+              color: #d10057;
+              padding: 2px 6px;
+              border-radius: 4px;
+              font-family: Consolas, Monaco, monospace;
+              font-size: 0.9em;
+            }
+          `}</style>
           <h1>Session 13 — Building Cross-Platform Mobile Apps Using .NET MAUI</h1>
 
           <p><strong>Duration:</strong> 2 hours</p>
@@ -44,7 +74,7 @@ export default function Session13() {
             <li>Windows</li>
           </ul>
 
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`One Codebase  →  Runs on Android, iOS, Windows, and macOS`}</code>
           </pre>
 
@@ -165,7 +195,7 @@ export default function Session13() {
 
           <h2>7. Basic XAML Example</h2>
 
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -192,7 +222,7 @@ export default function Session13() {
           </pre>
 
           <h3>Code-Behind</h3>
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`private void OnGreetClicked(object sender, EventArgs e)
 {
     string name = nameEntry.Text;
@@ -213,7 +243,7 @@ export default function Session13() {
 
           <h2>9. Simple Live Example – Counter App</h2>
 
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`// MainPage.xaml
 <VerticalStackLayout Padding="30" Spacing="25">
     <Label Text="Counter App"
@@ -233,7 +263,7 @@ export default function Session13() {
 </VerticalStackLayout>`}</code>
           </pre>
 
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`// MainPage.xaml.cs
 int count = 0;
 

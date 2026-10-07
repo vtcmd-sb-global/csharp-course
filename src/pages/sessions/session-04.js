@@ -153,6 +153,42 @@ int result = Add(10, 20);
 Console.WriteLine(result);   // 30`}</code>
           </pre>
 
+  <hr />
+  <table>
+  <thead>
+    <tr>
+      <th>Part</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>public</code></td>
+      <td>Access modifier</td>
+    </tr>
+    <tr>
+      <td><code>int</code></td>
+      <td>Return type</td>
+    </tr>
+    <tr>
+      <td><code>Add</code></td>
+      <td>Method name</td>
+    </tr>
+    <tr>
+      <td><code>int a</code></td>
+      <td>First parameter</td>
+    </tr>
+    <tr>
+      <td><code>int b</code></td>
+      <td>Second parameter</td>
+    </tr>
+    <tr>
+      <td><code>return</code></td>
+      <td>Sends a value back</td>
+    </tr>
+  </tbody>
+</table>
+  
           <hr />
 
           <h2>4. Access Modifiers</h2>

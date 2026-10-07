@@ -3,6 +3,26 @@ import Layout from '@theme/Layout';
 import CustomLayout from '@site/src/components/Layout/Layout';
 
 export default function Session14() {
+  const codeBlockStyle = {
+    backgroundColor: '#1e1e1e',
+    color: '#d4d4d4',
+    padding: '12px 16px',
+    borderRadius: '6px',
+    fontFamily: 'Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace',
+    fontSize: '0.9rem',
+    overflowX: 'auto',
+    lineHeight: '1.5',
+    margin: '12px 0 24px 0'
+  };
+
+  const inlineCodeStyle = {
+    backgroundColor: '#f4f4f4',
+    color: '#d10057',
+    padding: '2px 6px',
+    borderRadius: '4px',
+    fontFamily: 'Consolas, Monaco, monospace',
+    fontSize: '0.9em'
+  };
   return (
     <Layout
       title="Session 14 — .NET Development and the Future"
@@ -10,6 +30,16 @@ export default function Session14() {
     >
       <CustomLayout>
         <article className="session-content">
+        <style>{`
+            article code:not(pre code) {
+              background-color: #f4f4f4;
+              color: #d10057;
+              padding: 2px 6px;
+              border-radius: 4px;
+              font-family: Consolas, Monaco, monospace;
+              font-size: 0.9em;
+            }
+          `}</style>
           <h1>Session 14 — .NET Development and the Future</h1>
 
           <p><strong>Duration:</strong> 2 hours</p>
@@ -187,7 +217,7 @@ export default function Session14() {
           </ol>
 
           <h3>Using Command Line</h3>
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`# Create a new console application
 dotnet new console -n MyApp
 
@@ -206,7 +236,7 @@ dotnet new webapi -n MyWebApi`}</code>
           <h2>6. Self-Contained Deployment</h2>
           <p>Modern .NET allows you to publish an application as self-contained so that the target machine does not need .NET installed.</p>
 
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`dotnet publish -c Release -r win-x64 --self-contained true`}</code>
           </pre>
 

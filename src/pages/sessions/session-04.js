@@ -208,9 +208,8 @@ Console.WriteLine(result);   // 30`}</code>
 
           <h2>5. Method Overloading</h2>
   
-          <p>Method overloading means having multiple methods with the <strong>same name</strong> but different parameters.</p>
-
-  <p>Method overloading allows a class to have multiple methods with the same name as long as their parameter lists are different. This makes it possible to perform similar operations with different types or numbers of inputs.
+  <p>Method overloading allows a class to have multiple methods with the <strong>same name</strong> as long as their parameter lists are different. This makes it possible to perform similar operations with different types or numbers of inputs.
+  
   </p>
   
           <pre style={codeBlockStyle}>
@@ -242,10 +241,16 @@ Console.WriteLine(calc.Add(1, 2, 3));      // 6`}</code>
           <hr />
 
           <h2>6. Constructors</h2>
-          <p>A constructor is a special method that is automatically called when an object is created.</p>
-
-  <p>A constructor is a special member of a class that is used to initialize an object. It has the same name as the class and is automatically executed when an object is created using new.</p>
   
+  <p>A constructor is a special member of a class that is used to initialize an object. It has the same name as the class and is automatically executed when an object is created using new.</p>
+
+  Constructor initializes an object.
+  <ul>
+  <li>Its name is the same as the class.</li>
+  <li>It has no return type.</li>
+  <li>It runs automatically when new creates an object.</li>
+  <li>It can accept parameters.</li>
+  </ul>
           <h3>6.1 Default Constructor</h3>
   <p>A default constructor is a constructor that does not require any parameters. It can be used to assign initial or default values to an object's fields when the object is created.</p>
           <pre style={codeBlockStyle}>
@@ -316,31 +321,142 @@ Student s1 = new Student("Ali", 21, "C#");`}</code>
           <hr />
 
           <h2>7. Destructor</h2>
-          <p>A destructor is called automatically when the object is about to be destroyed (rarely used in modern C#).</p>
-<p>A destructor is a special member of a class that is associated with object cleanup. In C#, destructors are called by the garbage collector when an object is being reclaimed. They are rarely needed in modern C# because managed resources are normally handled automatically.</p>
+          <p>A <strong>destructor</strong> in C# is a special member of a class that can be used for cleanup when an object is being reclaimed by the <strong>Garbage Collector</strong>.
+
+Unlike a constructor, a destructor is <strong>not called when we create an object</strong>. It is associated with the cleanup of an object that is no longer being used.</p>
+
+    <h2>Important: Destructors Are Rarely Used</h2>
+
+    <p>In modern C#, you normally <strong>do not need to write a destructor</strong> for ordinary classes.</p>
+    <p>C# has a Garbage Collector (GC) that automatically manages memory. When an object is no longer reachable by the program, the Garbage Collector can eventually reclaim the memory used by that object.
+
+The important thing to remember is:</p>
+    <code>We cannot predict exactly when the Garbage Collector will run or when a destructor will execute.</code>
+
+    <h2>Destructor Syntax</h2>
+    <p>A destructor uses the class name preceded by the <code>~</code> symbol:</p>
           <pre style={codeBlockStyle}>
-            <code>{`public class Student
-{
-    public string Name;
-
-    public Student(string name)
-    {
-        Name = name;
-        Console.WriteLine($"Object created for {Name}");
-    }
-
-    // Destructor
-    ~Student()
-    {
-        Console.WriteLine($"Object destroyed for {Name}");
-    }
-}`}</code>
+            <code>{`
+            public class Student 
+            { 
+            
+              public string Name; 
+            
+              public Student(string name) 
+              { 
+                Name = name; 
+                Console.WriteLine($"Object created for {Name}"); 
+              } 
+              // Destructor 
+              ~Student() 
+              { 
+                Console.WriteLine($"Destructor called for {Name}"); 
+              } 
+            }
+          `}</code>
           </pre>
 
           <hr />
 
-          <h2>8. Complete Live Example</h2>
+    <h2> 1. Constructor</h2>
 
+    <pre style={codeBlockStyle}>
+      <code>
+          {`
+          public Student(string name) 
+          { 
+            Name = name; 
+            Console.WriteLine($"Object created for {Name}"); 
+          }
+        `}
+      </code>
+    </pre>
+
+        <p>The constructor runs when we create the object:</p>
+
+        <pre style={codeBlockStyle}>
+          <code>
+            {`
+              Student s1 = new Student("Ali");
+            `}
+          </code>
+        </pre>
+
+            <p>The object is created and its <code>Name</code> field is initialized.</p>
+
+            <h2>2. Destructor</h2>
+
+            <pre style={codeBlockStyle}>
+            <code>
+          {`
+            ~Student() 
+            { 
+              Console.WriteLine($"Destructor called for {Name}"); 
+            }
+          `}
+            </code>
+            </pre>
+
+              <p>The destructor is associated with the cleanup of the object.</p>
+
+              <p>However, we <strong>cannot do this:</strong>
+
+<code>s1.~Student();</code>   // ❌ Not valid C#
+
+A destructor cannot be called manually like a normal method.
+
+The Garbage Collector determines when the object can be reclaimed.</p>
+
+  <h2>Constructor vs Destructor</h2>
+  <table>
+  <thead>
+    <tr>
+      <th>Constructor</th>
+      <th>Destructor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Uses the class name</td>
+      <td>Uses <code>~</code> followed by the class name</td>
+    </tr>
+    <tr>
+      <td>Runs when an object is created</td>
+      <td>May run when the object is being finalized</td>
+    </tr>
+    <tr>
+      <td>Used to initialize an object</td>
+      <td>Associated with cleanup/finalization</td>
+    </tr>
+    <tr>
+      <td>Can accept parameters</td>
+      <td>Cannot accept parameters</td>
+    </tr>
+    <tr>
+      <td>Commonly used</td>
+      <td>Rarely used in modern C#</td>
+    </tr>
+    <tr>
+      <td>Called as part of <code>new</code></td>
+      <td>Timing is controlled by the Garbage Collector</td>
+    </tr>
+  </tbody>
+</table>
+
+  For this course, remember:
+<pre style={codeBlockStyle}>
+  <code>
+    Constructor → initializes an object.
+    Destructor → is associated with cleanup when the Garbage Collector finalizes an object.
+  </code>
+  </pre>
+
+  <p>You normally do not use destructors in everyday C# programming. They are mainly important to understand as part of the C# language and object lifecycle.
+
+Important: Do not rely on a destructor running immediately after an object is no longer needed.</p>
+  
+          <h2>8. Complete Live Example</h2>
+    
           <pre style={codeBlockStyle}>
             <code>{`public class Employee
 {

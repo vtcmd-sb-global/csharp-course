@@ -197,7 +197,7 @@ do
           </pre>
 
           <h3>2.4 foreach Loop</h3>
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`string[] names = { "Ali", "Sara", "Ahmed", "Fatima" };
 
 foreach (string name in names)

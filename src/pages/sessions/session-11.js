@@ -3,6 +3,26 @@ import Layout from '@theme/Layout';
 import CustomLayout from '@site/src/components/Layout/Layout';
 
 export default function Session11() {
+  const codeBlockStyle = {
+    backgroundColor: '#1e1e1e',
+    color: '#d4d4d4',
+    padding: '12px 16px',
+    borderRadius: '6px',
+    fontFamily: 'Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace',
+    fontSize: '0.9rem',
+    overflowX: 'auto',
+    lineHeight: '1.5',
+    margin: '12px 0 24px 0'
+  };
+
+  const inlineCodeStyle = {
+    backgroundColor: '#f4f4f4',
+    color: '#d10057',
+    padding: '2px 6px',
+    borderRadius: '4px',
+    fontFamily: 'Consolas, Monaco, monospace',
+    fontSize: '0.9em'
+  };
   return (
     <Layout
       title="Session 11 — GUI and Connectivity with SQL Database"
@@ -10,6 +30,16 @@ export default function Session11() {
     >
       <CustomLayout>
         <article className="session-content">
+        <style>{`
+            article code:not(pre code) {
+              background-color: #f4f4f4;
+              color: #d10057;
+              padding: 2px 6px;
+              border-radius: 4px;
+              font-family: Consolas, Monaco, monospace;
+              font-size: 0.9em;
+            }
+          `}</style>
           <h1>Session 11 — GUI and Connectivity with SQL Database</h1>
 
           <p><strong>Duration:</strong> 2 hours</p>
@@ -108,7 +138,7 @@ export default function Session11() {
 
           <h2>4. Simple Windows Forms Example</h2>
 
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`// Drag a TextBox (txtName), Button (btnGreet) and Label (lblMessage)
 
 private void btnGreet_Click(object sender, EventArgs e)
@@ -137,7 +167,7 @@ private void btnGreet_Click(object sender, EventArgs e)
           <h2>6. Connecting to SQL Server</h2>
 
           <h3>Connection String Example</h3>
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`string connectionString = @"Data Source=.;Initial Catalog=StudentDB;Integrated Security=True";
 
 // Or for SQL Server Authentication
@@ -145,7 +175,7 @@ private void btnGreet_Click(object sender, EventArgs e)
           </pre>
 
           <h3>Required Namespace</h3>
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`using System.Data.SqlClient;`}</code>
           </pre>
 
@@ -154,7 +184,7 @@ private void btnGreet_Click(object sender, EventArgs e)
           <h2>7. Performing CRUD Operations</h2>
 
           <h3>7.1 Insert Data</h3>
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`private void btnInsert_Click(object sender, EventArgs e)
 {
     try
@@ -181,7 +211,7 @@ private void btnGreet_Click(object sender, EventArgs e)
           </pre>
 
           <h3>7.2 Display Data in DataGridView</h3>
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`private void LoadData()
 {
     using (SqlConnection con = new SqlConnection(connectionString))
@@ -196,7 +226,7 @@ private void btnGreet_Click(object sender, EventArgs e)
           </pre>
 
           <h3>7.3 Update Data</h3>
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`string query = "UPDATE Students SET Name=@Name, Age=@Age, Course=@Course WHERE Id=@Id";
 SqlCommand cmd = new SqlCommand(query, con);
 
@@ -211,7 +241,7 @@ MessageBox.Show("Record updated successfully!");`}</code>
           </pre>
 
           <h3>7.4 Delete Data</h3>
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`string query = "DELETE FROM Students WHERE Id=@Id";
 SqlCommand cmd = new SqlCommand(query, con);
 cmd.Parameters.AddWithValue("@Id", Convert.ToInt32(txtId.Text));
@@ -232,7 +262,7 @@ MessageBox.Show("Record deleted successfully!");`}</code>
             <li>DataGridView to display all students</li>
           </ul>
 
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`// On Form Load
 private void Form1_Load(object sender, EventArgs e)
 {

@@ -327,7 +327,7 @@ Console.WriteLine($"Result: {(marks >= 50 ? "Pass" : "Fail")}");`}</code>
 
           <h3>Exercise 3</h3>
           <p>Create a program that asks for temperature in Celsius and converts it to Fahrenheit using the formula:</p>
-          <pre style="codeBlockStyle">
+          <pre style={codeBlockStyle}>
             <code>{`F = (C * 9/5) + 32`}</code>
           </pre>
 

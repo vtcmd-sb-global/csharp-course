@@ -73,7 +73,7 @@ export default function Session01() {
             <li>Games, IoT, and more</li>
           </ul>
 
-          <pre style="codeBlockStyle">
+          <pre style={codeBlockStyle}>
             <code>{`C#     = Programming Language
 .NET   = Platform / Runtime / Libraries that run the C# code`}</code>
           </pre>
@@ -128,13 +128,13 @@ export default function Session01() {
           </ol>
 
           <h3>Modern Program.cs (Default)</h3>
-          <pre style="codeBlockStyle">
+          <pre style={codeBlockStyle}>
             <code>{`// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");`}</code>
           </pre>
 
           <h3>Traditional Style (Older)</h3>
-          <pre style="codeBlockStyle">
+          <pre style={codeBlockStyle}>
             <code>{`using System;
 
 namespace FirstProgram
@@ -156,14 +156,14 @@ namespace FirstProgram
           <h2>4. Basic Input and Output</h2>
 
           <h3>Output</h3>
-          <pre style="codeBlockStyle">
+          <pre style={codeBlockStyle}>
             <code>{`Console.WriteLine("Welcome to C# Programming");
 Console.Write("This stays on the same line");
 Console.WriteLine(" → now it moves to next line");`}</code>
           </pre>
 
           <h3>Input</h3>
-          <pre style="codeBlockStyle">
+          <pre style={codeBlockStyle}>
             <code>{`Console.Write("Enter your name: ");
 string name = Console.ReadLine();
 
@@ -185,7 +185,7 @@ Console.WriteLine($"Hello {name}");`}</code>
           </ul>
           <p>Then displays a nice message.</p>
 
-          <pre style="codeBlockStyle">
+          <pre style={codeBlockStyle}>
             <code>{`Console.Write("Enter your name: ");
 string name = Console.ReadLine();
 
@@ -213,7 +213,7 @@ Console.WriteLine("================================");`}</code>
             <li>Displays a welcome message in this format:</li>
           </ol>
 
-          <pre style="codeBlockStyle">
+          <pre style={codeBlockStyle}>
             <code>{`Welcome Ali!
 You are learning C#.
 Have a great journey in programming!`}</code>

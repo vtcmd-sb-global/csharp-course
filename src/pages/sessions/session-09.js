@@ -3,6 +3,26 @@ import Layout from '@theme/Layout';
 import CustomLayout from '@site/src/components/Layout/Layout';
 
 export default function Session09() {
+  const codeBlockStyle = {
+    backgroundColor: '#1e1e1e',
+    color: '#d4d4d4',
+    padding: '12px 16px',
+    borderRadius: '6px',
+    fontFamily: 'Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace',
+    fontSize: '0.9rem',
+    overflowX: 'auto',
+    lineHeight: '1.5',
+    margin: '12px 0 24px 0'
+  };
+
+  const inlineCodeStyle = {
+    backgroundColor: '#f4f4f4',
+    color: '#d10057',
+    padding: '2px 6px',
+    borderRadius: '4px',
+    fontFamily: 'Consolas, Monaco, monospace',
+    fontSize: '0.9em'
+  };
   return (
     <Layout
       title="Session 09 — Events, Delegates, and Collections"
@@ -10,6 +30,16 @@ export default function Session09() {
     >
       <CustomLayout>
         <article className="session-content">
+        <style>{`
+            article code:not(pre code) {
+              background-color: #f4f4f4;
+              color: #d10057;
+              padding: 2px 6px;
+              border-radius: 4px;
+              font-family: Consolas, Monaco, monospace;
+              font-size: 0.9em;
+            }
+          `}</style>
           <h1>Session 09 — Events, Delegates, and Collections</h1>
 
           <p><strong>Duration:</strong> 2 hours</p>
@@ -35,7 +65,7 @@ export default function Session09() {
           <p>A delegate is a type that represents references to methods. It allows methods to be passed as parameters.</p>
 
           <h3>1.1 Declaring and Using a Delegate</h3>
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`// Declare delegate
 public delegate void GreetingDelegate(string name);
 
@@ -59,7 +89,7 @@ greet("Ali");                  // Goodbye, Ali!`}</code>
           </pre>
 
           <h3>1.2 Multicast Delegates</h3>
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`GreetingDelegate greet = SayHello;
 greet += SayGoodbye;           // Add another method
 
@@ -70,7 +100,7 @@ greet("Sara");
           </pre>
 
           <h3>1.3 Delegates with Return Type</h3>
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`public delegate int CalculateDelegate(int a, int b);
 
 public int Add(int a, int b) => a + b;
@@ -88,7 +118,7 @@ Console.WriteLine(calc(10, 5));     // 50`}</code>
           <h2>2. Events</h2>
           <p>Events are a way for a class to notify other classes when something happens. Events are based on delegates.</p>
 
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`public class Button
 {
     // Declare event
@@ -116,7 +146,7 @@ btn.Click();
           </pre>
 
           <h3>Real-world style Example</h3>
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`public class TemperatureSensor
 {
     public event Action<double> TemperatureChanged;
@@ -155,7 +185,7 @@ sensor.Temperature = 35;`}</code>
           <h3>3.1 Non-Generic Collections (System.Collections)</h3>
 
           <h4>ArrayList</h4>
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`using System.Collections;
 
 ArrayList list = new ArrayList();
@@ -171,7 +201,7 @@ foreach (var item in list)
           </pre>
 
           <h4>Hashtable</h4>
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`Hashtable ht = new Hashtable();
 ht.Add(1, "Ali");
 ht.Add(2, "Sara");
@@ -183,7 +213,7 @@ Console.WriteLine(ht[2]);     // Sara`}</code>
           <h3>3.2 Generic Collections (Recommended)</h3>
 
           <h4>List&lt;T&gt;</h4>
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`List<string> names = new List<string>();
 names.Add("Ali");
 names.Add("Sara");

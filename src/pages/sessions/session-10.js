@@ -3,6 +3,26 @@ import Layout from '@theme/Layout';
 import CustomLayout from '@site/src/components/Layout/Layout';
 
 export default function Session10() {
+  const codeBlockStyle = {
+    backgroundColor: '#1e1e1e',
+    color: '#d4d4d4',
+    padding: '12px 16px',
+    borderRadius: '6px',
+    fontFamily: 'Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace',
+    fontSize: '0.9rem',
+    overflowX: 'auto',
+    lineHeight: '1.5',
+    margin: '12px 0 24px 0'
+  };
+
+  const inlineCodeStyle = {
+    backgroundColor: '#f4f4f4',
+    color: '#d10057',
+    padding: '2px 6px',
+    borderRadius: '4px',
+    fontFamily: 'Consolas, Monaco, monospace',
+    fontSize: '0.9em'
+  };
   return (
     <Layout
       title="Session 10 — Generics and Iterators"
@@ -10,6 +30,16 @@ export default function Session10() {
     >
       <CustomLayout>
         <article className="session-content">
+        <style>{`
+            article code:not(pre code) {
+              background-color: #f4f4f4;
+              color: #d10057;
+              padding: 2px 6px;
+              border-radius: 4px;
+              font-family: Consolas, Monaco, monospace;
+              font-size: 0.9em;
+            }
+          `}</style>
           <h1>Session 10 — Generics and Iterators</h1>
 
           <p><strong>Duration:</strong> 2 hours</p>
@@ -34,7 +64,7 @@ export default function Session10() {
           <h2>1. What are Generics?</h2>
           <p>Generics allow you to design classes, methods, and interfaces that work with any data type while maintaining type safety.</p>
 
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`// Without Generics (not type-safe)
 ArrayList list = new ArrayList();
 list.Add(10);
@@ -59,7 +89,7 @@ numbers.Add(10);
 
           <h2>2. Generic Methods</h2>
 
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`public class Utility
 {
     // Generic method
@@ -90,7 +120,7 @@ Console.WriteLine($"s1 = {s1}, s2 = {s2}");`}</code>
 
           <h2>3. Generic Classes</h2>
 
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`public class Repository<T>
 {
     private List<T> items = new List<T>();
@@ -135,7 +165,7 @@ numbers.DisplayAll();`}</code>
           <h2>4. Generic Constraints</h2>
           <p>Constraints restrict the types that can be used with a generic class or method.</p>
 
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`// T must be a class (reference type)
 public class DataStore<T> where T : class
 {
@@ -199,7 +229,7 @@ public class Processor<T> where T : IComparable<T>
           <p>Iterators allow you to create custom looping logic using the <code>yield return</code> statement.</p>
 
           <h3>5.1 Simple Iterator</h3>
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`public static IEnumerable<int> GetNumbers()
 {
     yield return 1;
@@ -217,7 +247,7 @@ foreach (int number in GetNumbers())
           </pre>
 
           <h3>5.2 Iterator with Logic</h3>
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`public static IEnumerable<int> GetEvenNumbers(int max)
 {
     for (int i = 1; i <= max; i++)
@@ -235,7 +265,7 @@ foreach (int num in GetEvenNumbers(10))
           </pre>
 
           <h3>5.3 Custom Collection with Iterator</h3>
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`public class StudentCollection
 {
     private List<string> students = new List<string>();
@@ -288,7 +318,7 @@ foreach (string name in collection.GetStudentsStartingWith('A'))
 
           <h2>6. Complete Live Example</h2>
 
-          <pre>
+          <pre style={codeBlockStyle}>
             <code>{`public class GenericStack<T>
 {
     private List<T> items = new List<T>();

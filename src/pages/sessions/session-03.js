@@ -140,10 +140,9 @@ Console.WriteLine(age >= 18);`}</code>
           </pre>
 
           <p>
-            Since <code>age >= 18</code> is <code>true</code>, the program can
-            execute code associated with that condition.
-          </p>
-
+          Since <code>age &gt;= 18</code> is <code>true</code>, the program can
+          execute code associated with that condition.
+        </p>
           <h3>2.1 if Statement</h3>
 
           <p>

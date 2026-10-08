@@ -437,7 +437,7 @@ The important thing to remember is:</p>
 
               <p>However, we <strong>cannot do this:</strong>
 
-<code>s1.~Student();</code>   // ❌ Not valid C#
+<code>s1.~Student();</code>  (this is Not valid in C#)
 
 A destructor cannot be called manually like a normal method.
 
@@ -494,7 +494,8 @@ Important: Do not rely on a destructor running immediately after an object is no
           <h2>8. Complete Live Example</h2>
     
           <pre style={codeBlockStyle}>
-            <code>{`public class Employee
+            <code>{`
+            public class Employee
 {
     public string Name;
     public int Id;
@@ -506,8 +507,11 @@ Important: Do not rely on a destructor running immediately after an object is no
         Name = name;
         Id = id;
         Salary = salary;
+
+        Console.WriteLine($"Employee object created for {Name}");
     }
 
+    // Method
     public void Display()
     {
         Console.WriteLine("----- Employee Details -----");
@@ -517,16 +521,33 @@ Important: Do not rely on a destructor running immediately after an object is no
         Console.WriteLine("----------------------------");
     }
 
+    // Method with return value
     public double CalculateAnnualSalary()
     {
         return Salary * 12;
+    }
+
+    // Destructor (Finalizer)
+    ~Employee()
+    {
+        Console.WriteLine($"Destructor called for {Name}");
     }
 }
 
 // Testing
 Employee emp1 = new Employee("Ali Khan", 101, 75000);
+
 emp1.Display();
-Console.WriteLine($"Annual Salary: {emp1.CalculateAnnualSalary():C}");`}</code>
+
+Console.WriteLine(
+    $"Annual Salary: {emp1.CalculateAnnualSalary():C}"
+);
+
+// The destructor is NOT called manually.
+// The Garbage Collector determines when the object is finalized.
+`
+}
+</code>
           </pre>
 
           <hr />

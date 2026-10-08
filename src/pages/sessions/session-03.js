@@ -1946,39 +1946,6 @@ Lowest Marks  : 45
 
   <li>How would you create a simple student grade system using <code>if-else-if</code> and an array?</li>
 </ol>
-                
-          // <h2>15. Instructor Demonstration Checklist</h2>
-
-          // <p>
-          //   During the class, demonstrate these concepts live in Visual Studio:
-          // </p>
-
-          // <ol>
-          //   <li>Create a simple <code>if</code> statement.</li>
-          //   <li>Change it into an <code>if-else</code> statement.</li>
-          //   <li>Create an <code>else-if</code> grading system.</li>
-          //   <li>Demonstrate a nested <code>if</code>.</li>
-          //   <li>Convert a simple decision into a <code>switch</code>.</li>
-          //   <li>Explain <code>case</code>, <code>break</code>, and <code>default</code>.</li>
-          //   <li>Demonstrate the ternary operator.</li>
-          //   <li>Write a basic <code>for</code> loop.</li>
-          //   <li>Explain initialization, condition, and update in a <code>for</code> loop.</li>
-          //   <li>Demonstrate a <code>while</code> loop.</li>
-          //   <li>Show why forgetting to update a <code>while</code> variable can create an infinite loop.</li>
-          //   <li>Demonstrate <code>do-while</code>.</li>
-          //   <li>Demonstrate <code>foreach</code> with an array.</li>
-          //   <li>Show the difference between <code>break</code> and <code>continue</code>.</li>
-          //   <li>Create an integer array.</li>
-          //   <li>Demonstrate zero-based indexing.</li>
-          //   <li>Demonstrate the <code>Length</code> property.</li>
-          //   <li>Update an array element.</li>
-          //   <li>Traverse an array with <code>for</code>.</li>
-          //   <li>Traverse an array with <code>foreach</code>.</li>
-          //   <li>Create a 2D array.</li>
-          //   <li>Use nested loops to display a 2D array.</li>
-          //   <li>Demonstrate <code>Array.Sort()</code>.</li>
-          //   <li>Build the Student Grade Management challenge with the students.</li>
-          // </ol>
 
           <hr />
 

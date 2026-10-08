@@ -1850,38 +1850,135 @@ Lowest Marks  : 45
 
           <hr />
 
-          <h2>15. Instructor Demonstration Checklist</h2>
+                <h2>15. Interview Questions</h2>
 
-          <p>
-            During the class, demonstrate these concepts live in Visual Studio:
-          </p>
+<p>
+  Use these questions to test your understanding of programming constructs,
+  loops, jump statements, and arrays in C#.
+</p>
 
-          <ol>
-            <li>Create a simple <code>if</code> statement.</li>
-            <li>Change it into an <code>if-else</code> statement.</li>
-            <li>Create an <code>else-if</code> grading system.</li>
-            <li>Demonstrate a nested <code>if</code>.</li>
-            <li>Convert a simple decision into a <code>switch</code>.</li>
-            <li>Explain <code>case</code>, <code>break</code>, and <code>default</code>.</li>
-            <li>Demonstrate the ternary operator.</li>
-            <li>Write a basic <code>for</code> loop.</li>
-            <li>Explain initialization, condition, and update in a <code>for</code> loop.</li>
-            <li>Demonstrate a <code>while</code> loop.</li>
-            <li>Show why forgetting to update a <code>while</code> variable can create an infinite loop.</li>
-            <li>Demonstrate <code>do-while</code>.</li>
-            <li>Demonstrate <code>foreach</code> with an array.</li>
-            <li>Show the difference between <code>break</code> and <code>continue</code>.</li>
-            <li>Create an integer array.</li>
-            <li>Demonstrate zero-based indexing.</li>
-            <li>Demonstrate the <code>Length</code> property.</li>
-            <li>Update an array element.</li>
-            <li>Traverse an array with <code>for</code>.</li>
-            <li>Traverse an array with <code>foreach</code>.</li>
-            <li>Create a 2D array.</li>
-            <li>Use nested loops to display a 2D array.</li>
-            <li>Demonstrate <code>Array.Sort()</code>.</li>
-            <li>Build the Student Grade Management challenge with the students.</li>
-          </ol>
+<ol>
+  <li>What are programming constructs in C#?</li>
+
+  <li>What is a conditional statement?</li>
+
+  <li>What is the difference between <code>if</code> and <code>if-else</code>?</li>
+
+  <li>When would you use an <code>else-if</code> statement?</li>
+
+  <li>What is a nested <code>if</code> statement?</li>
+
+  <li>What is the difference between multiple <code>if</code> statements and an <code>if-else-if</code> structure?</li>
+
+  <li>What is a <code>switch</code> statement in C#?</li>
+
+  <li>What are <code>case</code>, <code>break</code>, and <code>default</code> used for in a <code>switch</code> statement?</li>
+
+  <li>When would you prefer <code>switch</code> over <code>if-else</code>?</li>
+
+  <li>What is the ternary operator in C#?</li>
+
+  <li>What is the difference between the ternary operator and an <code>if-else</code> statement?</li>
+
+  <li>What is a loop and why do we use loops in programming?</li>
+
+  <li>What are the different types of loops available in C#?</li>
+
+  <li>What is a <code>for</code> loop?</li>
+
+  <li>What are the three main parts of a <code>for</code> loop?</li>
+
+  <li>What is the difference between a <code>for</code> loop and a <code>while</code> loop?</li>
+
+  <li>When would you use a <code>while</code> loop?</li>
+
+  <li>What is a <code>do-while</code> loop?</li>
+
+  <li>What is the main difference between <code>while</code> and <code>do-while</code>?</li>
+
+  <li>What is a <code>foreach</code> loop and when is it useful?</li>
+
+  <li>What is an infinite loop?</li>
+
+  <li>How can an infinite loop accidentally be created using a <code>while</code> loop?</li>
+
+  <li>What is the purpose of the <code>break</code> statement?</li>
+
+  <li>What is the purpose of the <code>continue</code> statement?</li>
+
+  <li>What is the difference between <code>break</code> and <code>continue</code>?</li>
+
+  <li>What is an array in C#?</li>
+
+  <li>Why are C# arrays called zero-based?</li>
+
+  <li>How do you access the first element of an array?</li>
+
+  <li>What does the <code>Length</code> property of an array return?</li>
+
+  <li>What happens if you try to access an array index that does not exist?</li>
+
+  <li>What is the difference between declaring an array and initializing an array?</li>
+
+  <li>How do you update an existing element in an array?</li>
+
+  <li>What is the difference between traversing an array using <code>for</code> and <code>foreach</code>?</li>
+
+  <li>What is a two-dimensional array?</li>
+
+  <li>How can nested loops be used with a two-dimensional array?</li>
+
+  <li>What does <code>Array.Sort()</code> do?</li>
+
+  <li>What does <code>Array.Reverse()</code> do?</li>
+
+  <li>What does <code>Array.IndexOf()</code> do?</li>
+
+  <li>What is the difference between an array's index and its <code>Length</code>?</li>
+
+  <li>How would you find the largest value in an integer array?</li>
+
+  <li>How would you calculate the sum of all elements in an array?</li>
+
+  <li>How would you count how many values in an array are greater than 50?</li>
+
+  <li>Which loop would you choose to display every element of an array, and why?</li>
+
+  <li>How would you create a simple student grade system using <code>if-else-if</code> and an array?</li>
+</ol>
+                
+          // <h2>15. Instructor Demonstration Checklist</h2>
+
+          // <p>
+          //   During the class, demonstrate these concepts live in Visual Studio:
+          // </p>
+
+          // <ol>
+          //   <li>Create a simple <code>if</code> statement.</li>
+          //   <li>Change it into an <code>if-else</code> statement.</li>
+          //   <li>Create an <code>else-if</code> grading system.</li>
+          //   <li>Demonstrate a nested <code>if</code>.</li>
+          //   <li>Convert a simple decision into a <code>switch</code>.</li>
+          //   <li>Explain <code>case</code>, <code>break</code>, and <code>default</code>.</li>
+          //   <li>Demonstrate the ternary operator.</li>
+          //   <li>Write a basic <code>for</code> loop.</li>
+          //   <li>Explain initialization, condition, and update in a <code>for</code> loop.</li>
+          //   <li>Demonstrate a <code>while</code> loop.</li>
+          //   <li>Show why forgetting to update a <code>while</code> variable can create an infinite loop.</li>
+          //   <li>Demonstrate <code>do-while</code>.</li>
+          //   <li>Demonstrate <code>foreach</code> with an array.</li>
+          //   <li>Show the difference between <code>break</code> and <code>continue</code>.</li>
+          //   <li>Create an integer array.</li>
+          //   <li>Demonstrate zero-based indexing.</li>
+          //   <li>Demonstrate the <code>Length</code> property.</li>
+          //   <li>Update an array element.</li>
+          //   <li>Traverse an array with <code>for</code>.</li>
+          //   <li>Traverse an array with <code>foreach</code>.</li>
+          //   <li>Create a 2D array.</li>
+          //   <li>Use nested loops to display a 2D array.</li>
+          //   <li>Demonstrate <code>Array.Sort()</code>.</li>
+          //   <li>Build the Student Grade Management challenge with the students.</li>
+          // </ol>
 
           <hr />
 

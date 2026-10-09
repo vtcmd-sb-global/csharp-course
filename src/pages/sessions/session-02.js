@@ -1437,30 +1437,67 @@ Average      : 84.33
 
           <hr />
 
-          <h2>15. Instructor Demonstration Checklist</h2>
-
-          <p>
-            During the class, demonstrate the following concepts live in Visual Studio:
-          </p>
-
-          <ol>
-            <li>Create an <code>int</code> variable.</li>
-            <li>Change its value.</li>
-            <li>Create variables using different data types.</li>
-            <li>Demonstrate <code>char</code> vs <code>string</code>.</li>
-            <li>Demonstrate <code>var</code>.</li>
-            <li>Write single-line and multi-line comments.</li>
-            <li>Create a constant.</li>
-            <li>Demonstrate string interpolation.</li>
-            <li>Demonstrate arithmetic operators.</li>
-            <li>Show the difference between <code>10 / 3</code> and <code>10.0 / 3</code>.</li>
-            <li>Demonstrate <code>++</code> and <code>--</code>.</li>
-            <li>Demonstrate comparison and logical operators.</li>
-            <li>Take input using <code>Console.ReadLine()</code>.</li>
-            <li>Convert input using <code>Convert.ToInt32()</code>.</li>
-            <li>Demonstrate <code>TryParse()</code>.</li>
-            <li>Build the Student Result Card challenge with the students.</li>
-          </ol>
+          <h2>15. Interview Questions</h2> 
+          <p> Review the following interview questions to test your understanding of the basic building blocks of C#. 
+                Try to answer each question in your own words and write code examples wherever required. </p> 
+          <h3>Basic Concepts</h3> 
+          <ol> 
+            <li>What is a variable in C#?</li> 
+            <li>What is the difference between variable declaration, initialization, and assignment?</li> 
+            <li>What is a data type, and why do we use data types in C#?</li> 
+            <li>What is the difference between <code>int</code>, <code>float</code>, <code>double</code>, and <code>decimal</code>?</li> 
+            <li>What is the difference between <code>char</code> and <code>string</code>?</li> 
+            <li>What is the purpose of the <code>var</code> keyword? Can a variable declared with <code>var</code> change its data type later?</li> 
+            <li>What is the difference between a variable and a constant?</li> 
+            <li>What is a literal in C#? Give three examples.</li> 
+          </ol> 
+                
+          <h3>Comments and Strings</h3> 
+          <ol start="9"> 
+            <li>What are comments, and why are they useful in programming?</li> 
+            <li>What is the difference between single-line, multi-line, and XML documentation comments?</li> 
+            <li>What is string concatenation?</li> 
+            <li>What is string interpolation, and how does the <code>$</code> symbol work in an interpolated string?</li> 
+            <li>What are escape characters? Explain <code>\\n</code>, <code>\\t</code>, and <code>\\"</code>.</li> 
+            <li>What is the difference between <code>Console.Write()</code> and <code>Console.WriteLine()</code>?</li> 
+          </ol> 
+                
+          <h3>Operators and Expressions</h3> 
+          <ol start="15"> 
+            <li>What are arithmetic operators? Name the arithmetic operators available in C#.</li> 
+            <li>What is the difference between the <code>/</code> and <code>%</code> operators?</li> 
+            <li>What is the difference between <code>++</code> and <code>--</code>?</li> 
+            <li>What are assignment operators? Explain <code>+=</code> and <code>-=</code> with examples.</li> 
+            <li>What are comparison operators, and what type of result do they return?</li> 
+            <li>What is the difference between the logical AND (<code>&amp;&amp;</code>) and logical OR (<code>||</code>) operators?</li> 
+            <li>What does the logical NOT (<code>!</code>) operator do?</li> <li>What is operator precedence in C#?</li> 
+            <li>What will be the output of <code>10 + 5 * 2</code>, and why?</li> 
+            <li>What is the difference between <code>10 / 3</code> and <code>10.0 / 3</code>?</li> 
+          </ol> 
+          
+          <h3>User Input and Type Conversion</h3> 
+            <ol start="25"> 
+              <li>What is the purpose of <code>Console.ReadLine()</code>?</li> 
+              <li>What data type does <code>Console.ReadLine()</code> return?</li> 
+              <li>Why do we need type conversion when taking numeric input from the user?</li> 
+              <li>What is the difference between <code>Convert.ToInt32()</code> and <code>int.Parse()</code>?</li> 
+              <li>What is <code>TryParse()</code>, and why is it useful when handling user input?</li> 
+              <li>What happens if a user enters invalid text when the program expects an integer using <code>int.Parse()</code>?</li> 
+            </ol> 
+          
+          <h3>Practical Coding Questions</h3> 
+            <ol start="31"> 
+              <li>Write a C# program that declares variables of different data types and displays their values.</li> 
+              <li>Write a program that asks the user for their name and age, then displays both using string interpolation.</li> 
+              <li>Write a program that takes two numbers from the user and displays their sum, difference, product, quotient, and remainder.</li> 
+              <li>Write a program that calculates the average of three numbers and displays the result with decimal precision.</li> 
+              <li>Write a program that demonstrates the difference between integer division and decimal division.</li> 
+              <li>Write a program that uses <code>int.TryParse()</code> to validate numeric input from the user.</li> 
+              <li>Write a program that calculates an employee's annual salary using their monthly salary.</li> 
+              <li>Write a program that accepts a student's name, ID, and marks in three subjects, then displays a formatted Student Result Card with total and average marks.</li> 
+          </ol> 
+          
+          <p> <strong>Interview Preparation Tip:</strong> Do not only memorize definitions. Practise explaining each concept in your own words, predicting program output, and writing small C# programs without looking at the guide. </p>
 
           <hr />
 

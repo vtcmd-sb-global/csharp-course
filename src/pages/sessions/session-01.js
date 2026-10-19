@@ -1,28 +1,29 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import CustomLayout from '@site/src/components/Layout/Layout';
+import CodeBlock from '@site/src/components/CodeBlock';
 
 export default function Session01() {
-  const codeBlockStyle = {
-    backgroundColor: '#1e1e1e',
-    color: '#d4d4d4',
-    padding: '12px 16px',
-    borderRadius: '6px',
-    fontFamily: 'Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace',
-    fontSize: '0.9rem',
-    overflowX: 'auto',
-    lineHeight: '1.5',
-    margin: '12px 0 24px 0'
-  };
+  // const codeBlockStyle = {
+  //   backgroundColor: '#1e1e1e',
+  //   color: '#d4d4d4',
+  //   padding: '12px 16px',
+  //   borderRadius: '6px',
+  //   fontFamily: 'Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace',
+  //   fontSize: '0.9rem',
+  //   overflowX: 'auto',
+  //   lineHeight: '1.5',
+  //   margin: '12px 0 24px 0'
+  // };
 
-  const inlineCodeStyle = {
-    backgroundColor: '#f4f4f4',
-    color: '#d10057',
-    padding: '2px 6px',
-    borderRadius: '4px',
-    fontFamily: 'Consolas, Monaco, monospace',
-    fontSize: '0.9em'
-  };
+  // const inlineCodeStyle = {
+  //   backgroundColor: '#f4f4f4',
+  //   color: '#d10057',
+  //   padding: '2px 6px',
+  //   borderRadius: '4px',
+  //   fontFamily: 'Consolas, Monaco, monospace',
+  //   fontSize: '0.9em'
+  // };
   return (
     <Layout
       title="Session 01 — Getting Started with C#"
@@ -73,10 +74,11 @@ export default function Session01() {
             <li>Games, IoT, and more</li>
           </ul>
 
-          <pre style={codeBlockStyle}>
-            <code>{`C#     = Programming Language
-.NET   = Platform / Runtime / Libraries that run the C# code`}</code>
-          </pre>
+          <CodeBlock 
+            language="csharp"
+            code={`C#     = Programming Language
+              .NET   = Platform / Runtime / Libraries that run the C# code`}
+            caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <h3>Important Versions</h3>
           <table>
@@ -128,14 +130,16 @@ export default function Session01() {
           </ol>
 
           <h3>Modern Program.cs (Default)</h3>
-          <pre style={codeBlockStyle}>
-            <code>{`// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");`}</code>
-          </pre>
+          <CodeBlock
+            language="csharp"
+            code={`// See https://aka.ms/new-console-template for more information
+            Console.WriteLine("Hello, World!");`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <h3>Traditional Style (Older)</h3>
-          <pre style={codeBlockStyle}>
-            <code>{`using System;
+          <CodeBlock
+            language="csharp"
+            code={`using System;
 
 namespace FirstProgram
 {
@@ -146,8 +150,8 @@ namespace FirstProgram
             Console.WriteLine("Hello, World!");
         }
     }
-}`}</code>
-          </pre>
+}`}
+caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>Both styles work. Modern C# uses <strong>top-level statements</strong> (no need to write <code>Main</code> method explicitly).</p>
 
@@ -156,21 +160,23 @@ namespace FirstProgram
           <h2>4. Basic Input and Output</h2>
 
           <h3>Output</h3>
-          <pre style={codeBlockStyle}>
-            <code>{`Console.WriteLine("Welcome to C# Programming");
+          <CodeBlock
+            language="csharp"
+            code={`Console.WriteLine("Welcome to C# Programming");
 Console.Write("This stays on the same line");
-Console.WriteLine(" → now it moves to next line");`}</code>
-          </pre>
+Console.WriteLine(" → now it moves to next line");`}
+caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <h3>Input</h3>
-          <pre style={codeBlockStyle}>
-            <code>{`Console.Write("Enter your name: ");
+          <CodeBlock
+            language="csharp"
+            code={`Console.Write("Enter your name: ");
 string name = Console.ReadLine();
 
 Console.WriteLine("Hello " + name);
 // or better
-Console.WriteLine($"Hello {name}");`}</code>
-          </pre>
+Console.WriteLine($"Hello {name}");`}
+caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <hr />
 
@@ -185,8 +191,9 @@ Console.WriteLine($"Hello {name}");`}</code>
           </ul>
           <p>Then displays a nice message.</p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`Console.Write("Enter your name: ");
+          <CodeBlock
+            language="csharp"
+            code={`Console.Write("Enter your name: ");
 string name = Console.ReadLine();
 
 Console.Write("Enter your age: ");
@@ -200,8 +207,8 @@ Console.WriteLine("===== Student Information =====");
 Console.WriteLine($"Name : {name}");
 Console.WriteLine($"Age  : {age}");
 Console.WriteLine($"City : {city}");
-Console.WriteLine("================================");`}</code>
-          </pre>
+Console.WriteLine("================================");`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <hr />
 
@@ -213,11 +220,12 @@ Console.WriteLine("================================");`}</code>
             <li>Displays a welcome message in this format:</li>
           </ol>
 
-          <pre style={codeBlockStyle}>
-            <code>{`Welcome Ali!
+          <CodeBlock
+            language="csharp"
+            code={`Welcome Ali!
 You are learning C#.
-Have a great journey in programming!`}</code>
-          </pre>
+Have a great journey in programming!`}
+caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <hr />
 

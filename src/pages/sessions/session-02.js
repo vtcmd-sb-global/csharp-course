@@ -1149,7 +1149,7 @@ int age = Console.ReadLine(); // Incorrect`}
 
           <CodeBlock
             language="csharp"
-            code{`int a = 5;
+            code={`int a = 5;
 int b = 2;
 
 Console.WriteLine(a / b);`}

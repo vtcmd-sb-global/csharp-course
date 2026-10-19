@@ -1,29 +1,9 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import CustomLayout from '@site/src/components/Layout/Layout';
+import CodeBlock from '@site/src/components/CodeBlock';
 
 export default function Session02() {
-  const codeBlockStyle = {
-    backgroundColor: '#1e1e1e',
-    color: '#d4d4d4',
-    padding: '12px 16px',
-    borderRadius: '6px',
-    fontFamily: 'Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace',
-    fontSize: '0.9rem',
-    overflowX: 'auto',
-    lineHeight: '1.5',
-    margin: '12px 0 24px 0'
-  };
-
-  const inlineCodeStyle = {
-    backgroundColor: '#f4f4f4',
-    color: '#d10057',
-    padding: '2px 6px',
-    borderRadius: '4px',
-    fontFamily: 'Consolas, Monaco, monospace',
-    fontSize: '0.9em'
-  };
-
   return (
     <Layout
       title="Session 02 — Basic Building Blocks in C#"
@@ -96,12 +76,13 @@ export default function Session02() {
             name, and the value stored inside the box is the variable's value.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`int age = 20;
+          <CodeBlock
+              language="csharp"
+            code={`int age = 20;
 string name = "Ali";
 double salary = 45000.50;
-bool isStudent = true;`}</code>
-          </pre>
+bool isStudent = true;`}
+caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>In the example above:</p>
 
@@ -119,9 +100,10 @@ bool isStudent = true;`}</code>
             specifying its data type.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`int age;`}</code>
-          </pre>
+          <CodeBlock
+              language="csharp"
+            code={`int age;`}
+            caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
             Here, <code>int</code> is the data type and <code>age</code> is the variable name.
@@ -133,9 +115,10 @@ bool isStudent = true;`}</code>
             Initialization means giving a variable its first value when it is created.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`int age = 20;`}</code>
-          </pre>
+          <CodeBlock
+              language="csharp"
+            code={`int age = 20;`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
             This single statement both declares and initializes the variable.
@@ -148,20 +131,22 @@ bool isStudent = true;`}</code>
             has already been declared.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`int age;
+          <CodeBlock
+              language="csharp"
+            code={`int age;
 
 age = 20;
 age = 25;
 
-Console.WriteLine(age);`}</code>
-          </pre>
+Console.WriteLine(age);`}
+caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p><strong>Output:</strong></p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`25`}</code>
-          </pre>
+          <CodeBlock
+            language="csharp"
+            code={`25`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
             Notice that the value of <code>age</code> changed from <code>20</code> to
@@ -170,13 +155,14 @@ Console.WriteLine(age);`}</code>
 
           <h3>Declaring Multiple Variables</h3>
 
-          <pre style={codeBlockStyle}>
-            <code>{`int a = 10, b = 20, c = 30;
+          <CodeBlock
+            language="csharp"
+            code={`int a = 10, b = 20, c = 30;
 
 Console.WriteLine(a);
 Console.WriteLine(b);
-Console.WriteLine(c);`}</code>
-          </pre>
+Console.WriteLine(c);`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
             Although multiple variables can be declared in one statement, beginners
@@ -263,8 +249,9 @@ Console.WriteLine(c);`}</code>
 
           <h3>Examples of Data Types</h3>
 
-          <pre style={codeBlockStyle}>
-            <code>{`int age = 22;
+          <CodeBlock
+              language="csharp"
+            code={`int age = 22;
 long population = 250000000L;
 
 float temperature = 36.5f;
@@ -276,8 +263,8 @@ char grade = 'A';
 
 string name = "Muhammad";
 
-bool isLoggedIn = true;`}</code>
-          </pre>
+bool isLoggedIn = true;`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <h3>Important: Character vs String</h3>
 
@@ -286,19 +273,21 @@ bool isLoggedIn = true;`}</code>
             A <code>string</code> stores text and uses double quotes.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`char grade = 'A';
+          <CodeBlock
+              language="csharp"
+            code={`char grade = 'A';
 
-string name = "Ali";`}</code>
-          </pre>
+string name = "Ali";`}
+caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
             This is incorrect:
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`char grade = "A";`}</code>
-          </pre>
+          <CodeBlock
+            language="csharp"
+            code={`char grade = "A";`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
             because <code>"A"</code> is a string, not a character.
@@ -311,11 +300,12 @@ string name = "Ali";`}</code>
             to determine the variable's type from the value assigned to it.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`var age = 20;
+          <CodeBlock
+              language="csharp"
+            code={`var age = 20;
 var name = "Ali";
-var price = 99.99;`}</code>
-          </pre>
+var price = 99.99;`}
+            caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
             C# determines the types as:
@@ -332,11 +322,12 @@ var price = 99.99;`}</code>
             variable can change into any type later.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`var age = 20;
+          <CodeBlock
+              language="csharp"
+            code={`var age = 20;
 
-// age = "Ali";  // Error`}</code>
-          </pre>
+// age = "Ali";  // Error`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <hr />
 
@@ -349,23 +340,25 @@ var price = 99.99;`}</code>
 
           <h3>Single-Line Comments</h3>
 
-          <pre style={codeBlockStyle}>
-            <code>{`// This is a single-line comment
+          <CodeBlock
+            language="csharp"
+            code={`// This is a single-line comment
 int age = 20;
 
 // We can also write comments after code
-int marks = 85; // Student marks`}</code>
-          </pre>
+int marks = 85; // Student marks`}
+caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <h3>Multi-Line Comments</h3>
 
-          <pre style={codeBlockStyle}>
-            <code>{`/*
+          <CodeBlock
+            language="csharp"
+            code={`/*
    This is a multi-line comment.
    It can contain multiple lines.
    The compiler ignores all of it.
-*/`}</code>
-          </pre>
+*/`}
+caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <h3>XML Documentation Comments</h3>
 
@@ -375,8 +368,9 @@ int marks = 85; // Student marks`}</code>
             parameters, and return values.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`/// <summary>
+          <CodeBlock
+            language="csharp"
+            code={`/// <summary>
 /// Adds two numbers together.
 /// </summary>
 /// <param name="a">First number</param>
@@ -385,8 +379,8 @@ int marks = 85; // Student marks`}</code>
 int Add(int a, int b)
 {
     return a + b;
-}`}</code>
-          </pre>
+}`}
+caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
             In Visual Studio, XML documentation can help developers understand
@@ -404,20 +398,22 @@ int Add(int a, int b)
             Constants are declared using the <code>const</code> keyword.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`const double PI = 3.14159;
-const string CompanyName = "Aptech";`}</code>
-          </pre>
-
+          <CodeBlock
+              language="csharp"
+            code={`const double PI = 3.14159;
+const string CompanyName = "Aptech";`}
+caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+  
           <p>
             Trying to change a constant causes a compilation error.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`const int MaxMarks = 100;
+          <CodeBlock
+            language="csharp"
+            code={`const int MaxMarks = 100;
 
-// MaxMarks = 120; // Error`}</code>
-          </pre>
+// MaxMarks = 120; // Error`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <h3>Variable vs Constant</h3>
 
@@ -453,15 +449,17 @@ const string CompanyName = "Aptech";`}</code>
             A literal is a value written directly in the source code.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`int number = 100;
+          <CodeBlock
+            language="csharp"
+            code={`int number = 100;
 double price = 99.99;
 float rate = 5.5f;
 decimal amount = 250.75m;
 char grade = 'A';
 string message = "Hello";
-bool isActive = true;`}</code>
-          </pre>
+bool isActive = true;`}
+caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+          
 
           <p>
             Values such as <code>100</code>, <code>99.99</code>, <code>'A'</code>,
@@ -470,11 +468,12 @@ bool isActive = true;`}</code>
 
           <h3>Common Numeric Literal Suffixes</h3>
 
-          <pre style={codeBlockStyle}>
-            <code>{`long population = 8000000000L;
+          <CodeBlock
+            language="csharp"
+            code={`long population = 8000000000L;
 float temperature = 36.5f;
-decimal price = 999.99m;`}</code>
-          </pre>
+decimal price = 999.99m;`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
             The suffix helps C# identify the intended numeric type.
@@ -491,10 +490,11 @@ decimal price = 999.99m;`}</code>
             and moves the cursor to the next line.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`Console.WriteLine("Hello");
-Console.WriteLine("Welcome to C#");`}</code>
-          </pre>
+          <CodeBlock
+              language="csharp"
+            code={`Console.WriteLine("Hello");
+Console.WriteLine("Welcome to C#");`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <h3>Console.Write()</h3>
 
@@ -503,10 +503,11 @@ Console.WriteLine("Welcome to C#");`}</code>
             moving to the next line.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`Console.Write("Enter your name: ");
-Console.Write("Enter your age: ");`}</code>
-          </pre>
+          <CodeBlock
+              language="csharp"
+            code={`Console.Write("Enter your name: ");
+Console.Write("Enter your age: ");`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <h3>String Concatenation</h3>
 
@@ -515,13 +516,14 @@ Console.Write("Enter your age: ");`}</code>
             <code>+</code> operator.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`string name = "Ali";
+          <CodeBlock
+            language="csharp"
+            code={`string name = "Ali";
 int age = 21;
 
 Console.WriteLine("Name: " + name);
-Console.WriteLine("Age: " + age);`}</code>
-          </pre>
+Console.WriteLine("Age: " + age);`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <h3>String Interpolation</h3>
 
@@ -530,15 +532,16 @@ Console.WriteLine("Age: " + age);`}</code>
             expressions directly inside a string.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`string name = "Ali";
+          <CodeBlock
+              language="csharp"
+            code={`string name = "Ali";
 int age = 21;
 
 Console.WriteLine($"Name: {name}");
 Console.WriteLine($"Age: {age}");
 
-Console.WriteLine($"Next year you will be {age + 1} years old.");`}</code>
-          </pre>
+Console.WriteLine($"Next year you will be {age + 1} years old.");`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
             The <code>$</code> before the string enables interpolation.
@@ -551,11 +554,12 @@ Console.WriteLine($"Next year you will be {age + 1} years old.");`}</code>
             Escape characters allow us to represent special characters inside strings.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`Console.WriteLine("Hello\\nWorld");
+          <CodeBlock
+              language="csharp"
+            code={`Console.WriteLine("Hello\\nWorld");
 Console.WriteLine("Name:\\tAli");
-Console.WriteLine("He said, \\"Hello\\".");`}</code>
-          </pre>
+Console.WriteLine("He said, \\"Hello\\".");`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <table>
             <thead>
@@ -640,16 +644,17 @@ Console.WriteLine("He said, \\"Hello\\".");`}</code>
             </tbody>
           </table>
 
-          <pre style={codeBlockStyle}>
-            <code>{`int a = 10;
+          <CodeBlock
+            language="csharp"
+            code={`int a = 10;
 int b = 3;
 
 Console.WriteLine(a + b); // 13
 Console.WriteLine(a - b); // 7
 Console.WriteLine(a * b); // 30
 Console.WriteLine(a / b); // 3
-Console.WriteLine(a % b); // 1`}</code>
-          </pre>
+Console.WriteLine(a % b); // 1`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <h3>Important: Integer Division</h3>
 
@@ -658,45 +663,50 @@ Console.WriteLine(a % b); // 1`}</code>
             The decimal portion is discarded.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`Console.WriteLine(10 / 3);`}</code>
-          </pre>
+          <CodeBlock
+            language="csahrp"
+            code={`Console.WriteLine(10 / 3);`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p><strong>Output:</strong></p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`3`}</code>
-          </pre>
+          <CodeBlock
+            language="csharp"
+            code={`3`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
             If you want a decimal result, at least one value should be a
             decimal-compatible type.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`Console.WriteLine(10.0 / 3);
-Console.WriteLine(10.0m / 3);`}</code>
-          </pre>
+          <CodeBlock
+              language="csharp"
+            code={`Console.WriteLine(10.0 / 3);
+Console.WriteLine(10.0m / 3);`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p><strong>Example output:</strong></p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`3.33333333333333
-3.3333333333333333333333333333`}</code>
-          </pre>
+          <CodeBlock
+            language="csharp"
+            code={`3.33333333333333
+3.3333333333333333333333333333`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <h3>6.2 Assignment Operators</h3>
 
-          <pre style={codeBlockStyle}>
-            <code>{`int x = 10;
+          <CodeBlock
+            language="csharp"
+            code={`int x = 10;
 
 x += 5;   // x = x + 5
 x -= 3;   // x = x - 3
 x *= 2;   // x = x * 2
 x /= 4;   // x = x / 4
 
-Console.WriteLine(x);`}</code>
-          </pre>
+Console.WriteLine(x);`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
             These operators provide a shorter way to update an existing variable.
@@ -709,15 +719,16 @@ Console.WriteLine(x);`}</code>
             The decrement operator <code>--</code> decreases a value by 1.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`int count = 5;
+          <CodeBlock
+              language="csharp"
+            code={`int count = 5;
 
 count++;
 Console.WriteLine(count); // 6
 
 count--;
-Console.WriteLine(count); // 5`}</code>
-          </pre>
+Console.WriteLine(count); // 5`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
             These operators are especially common in loops, which you will study
@@ -731,8 +742,9 @@ Console.WriteLine(count); // 5`}</code>
             <code>true</code> or <code>false</code>.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`int a = 10;
+          <CodeBlock
+            language="csharp"
+            code={`int a = 10;
 int b = 20;
 
 Console.WriteLine(a == b); // false
@@ -740,8 +752,8 @@ Console.WriteLine(a != b); // true
 Console.WriteLine(a > b);  // false
 Console.WriteLine(a < b);  // true
 Console.WriteLine(a >= b); // false
-Console.WriteLine(a <= b); // true`}</code>
-          </pre>
+Console.WriteLine(a <= b); // true`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <h3>6.5 Logical Operators</h3>
 
@@ -749,14 +761,15 @@ Console.WriteLine(a <= b); // true`}</code>
             Logical operators are used to combine or reverse Boolean conditions.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`bool isStudent = true;
+          <CodeBlock
+            language="csharp"
+            code={`bool isStudent = true;
 bool hasIdCard = false;
 
 Console.WriteLine(isStudent && hasIdCard); // false
 Console.WriteLine(isStudent || hasIdCard); // true
-Console.WriteLine(!isStudent);             // false`}</code>
-          </pre>
+Console.WriteLine(!isStudent);             // false`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <table>
             <thead>
@@ -791,37 +804,41 @@ Console.WriteLine(!isStudent);             // false`}</code>
             order when evaluating the expression.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`int result = 10 + 5 * 2;
+          <CodeBlock
+              language="csharp"
+            code={`int result = 10 + 5 * 2;
 
-Console.WriteLine(result);`}</code>
-          </pre>
+Console.WriteLine(result);`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p><strong>Output:</strong></p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`20`}</code>
-          </pre>
+          <CodeBlock
+            language="csharp"
+            code={`20`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
             Multiplication is performed before addition:
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`10 + (5 * 2)
+          <CodeBlock
+            language="csharp"
+            code={`10 + (5 * 2)
 10 + 10
-20`}</code>
-          </pre>
+20`}
+    caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
             Parentheses can be used when you want to control the order.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`int result = (10 + 5) * 2;
+          <CodeBlock
+      language="csharp"
+            code={`int result = (10 + 5) * 2;
 
-Console.WriteLine(result); // 30`}</code>
-          </pre>
+Console.WriteLine(result); // 30`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <hr />
 
@@ -834,13 +851,14 @@ Console.WriteLine(result); // 30`}</code>
             and press Enter.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`Console.Write("Enter your name: ");
+          <CodeBlock
+              language="csharp"
+            code={`Console.Write("Enter your name: ");
 
 string name = Console.ReadLine();
 
-Console.WriteLine($"Hello, {name}!");`}</code>
-          </pre>
+Console.WriteLine($"Hello, {name}!");`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
             An important point for beginners is that <code>Console.ReadLine()</code>
@@ -868,13 +886,14 @@ Console.WriteLine($"Hello, {name}!");`}</code>
             console input.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`Console.Write("Enter your age: ");
+          <CodeBlock
+              language="csharp"
+            code={`Console.Write("Enter your age: ");
 
 int age = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine($"Your age is {age}.");`}</code>
-          </pre>
+Console.WriteLine($"Your age is {age}.");`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
             The process is:
@@ -888,13 +907,14 @@ Console.WriteLine($"Your age is {age}.");`}</code>
 
           <h3>Converting Decimal Input</h3>
 
-          <pre style={codeBlockStyle}>
-            <code>{`Console.Write("Enter your salary: ");
+          <CodeBlock
+            language="csharp"
+            code={`Console.Write("Enter your salary: ");
 
 decimal salary = Convert.ToDecimal(Console.ReadLine());
 
-Console.WriteLine($"Salary = {salary}");`}</code>
-          </pre>
+Console.WriteLine($"Salary = {salary}");`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <h3>Using Parse()</h3>
 
@@ -902,13 +922,14 @@ Console.WriteLine($"Salary = {salary}");`}</code>
             Another common approach is the <code>Parse()</code> method.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`Console.Write("Enter your age: ");
+          <CodeBlock
+            language="csharp"
+            code={`Console.Write("Enter your age: ");
 
 int age = int.Parse(Console.ReadLine());
 
-Console.WriteLine($"Age = {age}");`}</code>
-          </pre>
+Console.WriteLine($"Age = {age}");`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
             <code>Parse()</code> expects the text to contain a valid value.
@@ -922,8 +943,9 @@ Console.WriteLine($"Age = {age}");`}</code>
             conversion succeeded instead of immediately causing an exception.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`Console.Write("Enter your age: ");
+          <CodeBlock
+              language="csharp"
+            code={`Console.Write("Enter your age: ");
 
 bool success = int.TryParse(Console.ReadLine(), out int age);
 
@@ -936,8 +958,8 @@ if (success)
 else
 {
     Console.WriteLine("Please enter a valid number.");
-}`}</code>
-          </pre>
+}`}
+caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
             <strong>Note:</strong> <code>if</code> statements are introduced here
@@ -956,8 +978,9 @@ else
             arithmetic operators, and string interpolation.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`Console.Write("Enter first number: ");
+          <CodeBlock
+              language="csharp"
+            code={`Console.Write("Enter first number: ");
 double num1 = Convert.ToDouble(Console.ReadLine());
 
 Console.Write("Enter second number: ");
@@ -969,25 +992,27 @@ Console.WriteLine("----- Calculator Result -----");
 Console.WriteLine($"Sum        = {num1 + num2}");
 Console.WriteLine($"Difference = {num1 - num2}");
 Console.WriteLine($"Product    = {num1 * num2}");
-Console.WriteLine($"Quotient   = {num1 / num2}");`}</code>
-          </pre>
+Console.WriteLine($"Quotient   = {num1 / num2}");`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p><strong>Example Input:</strong></p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`Enter first number: 20
-Enter second number: 5`}</code>
-          </pre>
+          <CodeBlock
+            language="csharp"
+            code={`Enter first number: 20
+Enter second number: 5`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p><strong>Example Output:</strong></p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`----- Calculator Result -----
+          <CodeBlock
+            language="csharp"
+            code={`----- Calculator Result -----
 Sum        = 25
 Difference = 15
 Product    = 100
-Quotient   = 4`}</code>
-          </pre>
+Quotient   = 4`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <h3>Example 2: Student Details</h3>
 
@@ -996,8 +1021,9 @@ Quotient   = 4`}</code>
             variables, and formatted output.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`Console.Write("Enter student name: ");
+          <CodeBlock
+            language="csharp"
+            code={`Console.Write("Enter student name: ");
 string name = Console.ReadLine();
 
 Console.Write("Enter student age: ");
@@ -1011,8 +1037,8 @@ Console.WriteLine("----- Student Report -----");
 
 Console.WriteLine($"Name  : {name}");
 Console.WriteLine($"Age   : {age}");
-Console.WriteLine($"Marks : {marks}");`}</code>
-          </pre>
+Console.WriteLine($"Marks : {marks}");`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <h3>Example 3: Employee Salary</h3>
 
@@ -1021,8 +1047,9 @@ Console.WriteLine($"Marks : {marks}");`}</code>
             for financial values.
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`Console.Write("Enter employee name: ");
+          <CodeBlock
+              language="csharp"
+            code={`Console.Write("Enter employee name: ");
 string name = Console.ReadLine();
 
 Console.Write("Enter monthly salary: ");
@@ -1034,13 +1061,14 @@ Console.WriteLine();
 Console.WriteLine("----- Employee Salary -----");
 Console.WriteLine($"Employee      : {name}");
 Console.WriteLine($"Monthly Salary: {salary}");
-Console.WriteLine($"Annual Salary : {annualSalary}");`}</code>
-          </pre>
+Console.WriteLine($"Annual Salary : {annualSalary}");`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <h3>Example 4: Personal Information Card</h3>
 
-          <pre style={codeBlockStyle}>
-            <code>{`Console.Write("Enter your full name: ");
+          <CodeBlock
+            language="csharp"
+            code={`Console.Write("Enter your full name: ");
 string name = Console.ReadLine();
 
 Console.Write("Enter your age: ");
@@ -1060,65 +1088,72 @@ Console.WriteLine($"Name            : {name}");
 Console.WriteLine($"Age             : {age}");
 Console.WriteLine($"City            : {city}");
 Console.WriteLine($"Favorite Subject: {subject}");
-Console.WriteLine("===============================");`}</code>
-          </pre>
-
+Console.WriteLine("===============================");`}
+caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+  
           <hr />
 
           <h2>10. Common Beginner Mistakes</h2>
 
           <h3>Mistake 1: Forgetting the Data Type</h3>
 
-          <pre style={codeBlockStyle}>
-            <code>{`age = 20; // Error if age has not been declared`}</code>
-          </pre>
+          <CodeBlock
+              language="csharp"
+            code={`age = 20; // Error if age has not been declared`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
             Correct:
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`int age = 20;`}</code>
-          </pre>
+          <CodeBlock
+            language="csharp"
+            code={`int age = 20;`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <h3>Mistake 2: Using Double Quotes for char</h3>
 
-          <pre style={codeBlockStyle}>
-            <code>{`char grade = "A"; // Incorrect`}</code>
-          </pre>
+          <CodeBlock
+            language="csharp"
+            code={`char grade = "A"; // Incorrect`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
             Correct:
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`char grade = 'A';`}</code>
-          </pre>
+          <CodeBlock
+            language="csharp"
+            code={`char grade = 'A';`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <h3>Mistake 3: Forgetting Conversion</h3>
 
-          <pre style={codeBlockStyle}>
-            <code>{`Console.Write("Enter age: ");
+          <CodeBlock
+            language="csharp"
+            code={`Console.Write("Enter age: ");
 
-int age = Console.ReadLine(); // Incorrect`}</code>
-          </pre>
+int age = Console.ReadLine(); // Incorrect`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
             Correct:
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`int age = Convert.ToInt32(Console.ReadLine());`}</code>
-          </pre>
+          <CodeBlock
+            language="csharp"
+            code={`int age = Convert.ToInt32(Console.ReadLine());`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <h3>Mistake 4: Expecting Decimal Division from Integers</h3>
 
-          <pre style={codeBlockStyle}>
-            <code>{`int a = 5;
+          <CodeBlock
+            language="csharp"
+            code{`int a = 5;
 int b = 2;
 
-Console.WriteLine(a / b);`}</code>
-          </pre>
+Console.WriteLine(a / b);`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
             The result is <code>2</code>, not <code>2.5</code>, because both
@@ -1127,11 +1162,12 @@ Console.WriteLine(a / b);`}</code>
 
           <h3>Mistake 5: Trying to Change a Constant</h3>
 
-          <pre style={codeBlockStyle}>
-            <code>{`const int MaxMarks = 100;
+          <CodeBlock
+              language="csharp"
+            code={`const int MaxMarks = 100;
 
-// MaxMarks = 90; // Error`}</code>
-          </pre>
+// MaxMarks = 90; // Error`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <hr />
 
@@ -1184,9 +1220,10 @@ Console.WriteLine(a / b);`}</code>
             using the formula:
           </p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`F = (C * 9 / 5) + 32`}</code>
-          </pre>
+          <CodeBlock
+            language="chsarp"
+            code={`F = (C * 9 / 5) + 32`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <h3>Exercise 5 — Rectangle Calculator</h3>
 
@@ -1202,11 +1239,12 @@ Console.WriteLine(a / b);`}</code>
 
           <p>Use these formulas:</p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`Area = length × width
+          <CodeBlock
+            language="csharp"
+            code={`Area = length × width
 
-Perimeter = 2 × (length + width)`}</code>
-          </pre>
+Perimeter = 2 × (length + width)`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <hr />
 
@@ -1242,8 +1280,9 @@ Perimeter = 2 × (length + width)`}</code>
 
           <p>Example format:</p>
 
-          <pre style={codeBlockStyle}>
-            <code>{`====================================
+          <CodeBlock
+            language="csharp"
+            code={`====================================
           STUDENT RESULT CARD
 ====================================
 Student Name : Ali Khan
@@ -1254,8 +1293,8 @@ HTML Marks   : 90
 ------------------------------------
 Total Marks  : 253
 Average      : 84.33
-====================================`}</code>
-          </pre>
+====================================`}
+          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
             <strong>Bonus:</strong> Add a constant called

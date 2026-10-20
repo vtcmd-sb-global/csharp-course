@@ -318,7 +318,48 @@ Then create two derived classes: <code>Car</code> and <code>Motorcycle</code> th
 
           <hr />
 
-          <h2>9. Session Challenge</h2>
+            <hr />
+<h2>9. Quick Intro to List&lt;T&gt; (needed for the Challenge)</h2>
+<p>
+  So far you have used arrays. Arrays have a fixed size.  
+  <code>List&lt;T&gt;</code> is a flexible collection that can grow and shrink.  
+  We only need the basics for today’s challenge.
+</p>
+
+<p><strong>What you need to know right now:</strong></p>
+<ul>
+  <li><code>List&lt;T&gt;</code> lives in the <code>System.Collections.Generic</code> namespace</li>
+  <li>You create it with: <code>List&lt;Person&gt; people = new List&lt;Person&gt;();</code></li>
+  <li><code>Add()</code> – adds an item</li>
+  <li><code>foreach</code> – loops through every item (just like an array)</li>
+</ul>
+
+<CodeBlock
+  language="csharp"
+  code={`using System.Collections.Generic;   // required for List<>
+
+// Create an empty list that can hold Person objects
+List<Person> people = new List<Person>();
+
+// Add objects (Student and Teacher are both Persons)
+people.Add(new Student { Name = "Ali", Age = 20, Course = "C#" });
+people.Add(new Teacher { Name = "Sara", Age = 35, Subject = "Math" });
+people.Add(new Student { Name = "Bilal", Age = 22, Course = "Web" });
+
+// Loop through the list and call the virtual method
+foreach (Person p in people)
+{
+    p.Introduce();   // Polymorphism in action!
+}`}
+  caption="Minimal List&lt;Person&gt; example – this is all you need for the challenge."
+/>
+
+<p>
+  That’s it for now. You will learn many more List methods (Remove, Count, Contains, etc.) in Session 09.
+</p>
+    <hr />
+            
+          <h2>10. Session Challenge</h2>
           <p>Build a simple School System:</p>
           <ul>
             <li>Base class: <code>Person</code> (Name, Age, virtual Introduce())</li>
@@ -330,7 +371,7 @@ Loop through the list and call <code>Introduce()</code> on each object.</p>
 
           <hr />
 
-          <h2>10. Session Quiz</h2>
+          <h2>11. Session Quiz</h2>
           <ol>
             <li>What is Inheritance?</li>
             <li>What symbol is used for inheritance in C#?</li>

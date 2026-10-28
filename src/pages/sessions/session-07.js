@@ -192,7 +192,7 @@ export default function Session07() {
           />
 
           <p>
-            The <code>=></code> syntax means “this property always returns the result of this expression”.  
+            The <code>{'=>'}</code> syntax means “this property always returns the result of this expression”.  
             There is no backing field and no setter.
           </p>
 
@@ -255,7 +255,7 @@ Console.WriteLine(list[1]);   // Sara`}
           <h3>How to write an indexer yourself</h3>
           <ol>
             <li>Decide what type of index you need (usually <code>int</code>, sometimes <code>string</code>).</li>
-            <li>Write <code>public Type this[int index] {{ get {{ ... }} set {{ ... }} }}</code>.</li>
+            <li>Write <code>{'public Type this[int index] { get { ... } set { ... } }'}</code>.</li>
             <li>Add validation for the index.</li>
             <li>Store the data in a private array, list, or dictionary.</li>
           </ol>

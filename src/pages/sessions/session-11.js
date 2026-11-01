@@ -640,22 +640,15 @@ MessageBox.Show("Record deleted successfully!");`}
 
           <h3>What the Form Looks Like</h3>
 
-          <p>Here are realistic examples of how your Student Management System form should look:</p>
+          <p>Here is a realistic example of how your Student Management System form should look:</p>
 
-          <p><strong>Example 1 – Clean layout with sample data</strong></p>
-          <img 
-            src={useBaseUrl('/img/session11/form1.jpg')} 
-            alt="Student Management System Windows Form Example 1" 
-            style={{maxWidth: '100%', border: '1px solid #ddd', borderRadius: '6px', margin: '12px 0'}}
-          />
-
-          <p><strong>Example 2 – Another common layout style</strong></p>
+          <p><strong>Example – Clean layout with sample data</strong></p>
           <img 
             src={useBaseUrl('/img/session11/form2.jpg')} 
             alt="Student Management System Windows Form Example 2" 
             style={{maxWidth: '100%', border: '1px solid #ddd', borderRadius: '6px', margin: '12px 0'}}
           />
-
+            
           <h3>Recommended Form Layout</h3>
 
           <ul>

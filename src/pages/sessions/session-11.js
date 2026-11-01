@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '@theme/Layout';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import CustomLayout from '@site/src/components/Layout/Layout';
 import CodeBlock from '@site/src/components/CodeBlock';
 
@@ -643,14 +644,14 @@ MessageBox.Show("Record deleted successfully!");`}
 
           <p><strong>Example 1 – Clean layout with sample data</strong></p>
           <img 
-            src="/img/session11/form1.jpg" 
+            src={useBaseUrl('/img/session11/form1.jpg')} 
             alt="Student Management System Windows Form Example 1" 
             style={{maxWidth: '100%', border: '1px solid #ddd', borderRadius: '6px', margin: '12px 0'}}
           />
 
           <p><strong>Example 2 – Another common layout style</strong></p>
           <img 
-            src="/img/session11/form2.jpg" 
+            src={useBaseUrl('/img/session11/form2.jpg')} 
             alt="Student Management System Windows Form Example 2" 
             style={{maxWidth: '100%', border: '1px solid #ddd', borderRadius: '6px', margin: '12px 0'}}
           />

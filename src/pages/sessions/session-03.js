@@ -35,7 +35,7 @@ export default function Session03() {
             control program flow and work with collections of values.
           </p>
 
-          <p><strong>Based on:</strong> Official Aptech Book – Session 3</p>
+          <p><strong>Based on:</strong> Official Book – Session 3</p>
 
           <hr />
 

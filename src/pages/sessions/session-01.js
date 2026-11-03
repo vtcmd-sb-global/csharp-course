@@ -45,7 +45,7 @@ export default function Session01() {
 
           <p><strong>Duration:</strong> 2 hours</p>
           <p><strong>Focus:</strong> Understand .NET, set up the development environment, and write your first C# programs.</p>
-          <p><strong>Based on:</strong> Official Aptech Book – Session 1</p>
+          <p><strong>Based on:</strong> Official Book – Session 1</p>
 
           <hr />
 

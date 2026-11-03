@@ -25,7 +25,7 @@ export default function Session06() {
 
           <p><strong>Duration:</strong> 2 hours</p>
           <p><strong>Focus:</strong> Learn Abstract Classes and Interfaces — two powerful tools for designing flexible and maintainable code.</p>
-          <p><strong>Based on:</strong> Official Aptech Book – Session 6</p>
+          <p><strong>Based on:</strong> Official Book – Session 6</p>
 
           <hr />
 

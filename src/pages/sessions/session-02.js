@@ -33,7 +33,7 @@ export default function Session02() {
             user input, and basic console output.
           </p>
 
-          <p><strong>Based on:</strong> Official Aptech Book – Session 2</p>
+          <p><strong>Based on:</strong> Official Book – Session 2</p>
 
           <hr />
 

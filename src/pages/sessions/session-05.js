@@ -25,7 +25,7 @@ export default function Session05() {
 
           <p><strong>Duration:</strong> 2 hours</p>
           <p><strong>Focus:</strong> Learn how classes can inherit from other classes and how polymorphism allows objects to behave differently.</p>
-          <p><strong>Based on:</strong> Official Aptech Book – Session 5</p>
+          <p><strong>Based on:</strong> Official Book – Session 5</p>
 
           <hr />
 

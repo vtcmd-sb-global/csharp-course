@@ -25,7 +25,7 @@ export default function Session04() {
 
           <p><strong>Duration:</strong> 2 hours</p>
           <p><strong>Focus:</strong> Understand Object-Oriented Programming basics — Classes, Objects, Methods, Constructors and Access Modifiers.</p>
-          <p><strong>Based on:</strong> Official Aptech Book – Session 4</p>
+          <p><strong>Based on:</strong> Official Book – Session 4</p>
 
           <hr />
 

@@ -63,8 +63,8 @@ export default function Session09() {
           <p>
             The signature of the delegate (return type and parameters) must
             match the methods you assign to it. Built-in generic delegates such
-            as <code>Action</code>, <code>Action<T></code>, and
-            <code>Func<T, TResult></code> cover many common cases so you
+            as <code>Action</code>, <code>Action{'<'}T{'>'}</code>, and
+            <code>Func{'<'}T, TResult{'>'}</code> cover many common cases so you
             often do not need a custom delegate type.
           </p>
 
@@ -144,7 +144,7 @@ Console.WriteLine(calc(10, 5));     // 50`}
 
           <p>
             You can achieve the same thing with the built-in
-            <code>Func<int, int, int></code> without declaring a custom
+            <code>Func{'<'}int, int, int{'>'}</code> without declaring a custom
             delegate type:
           </p>
           <CodeBlock
@@ -247,7 +247,7 @@ sensor.Temperature = 35;`}
             any code that assigns <code>Temperature</code> automatically
             notifies subscribers. Multiple handlers can subscribe; each one
             receives the new temperature value through the
-            <code>Action<double></code> parameter.
+            <code>Action{'<'}double{'>'}</code> parameter.
           </p>
 
           <p>
@@ -297,7 +297,7 @@ foreach (var item in list)
             ArrayList can hold mixed types because everything is stored as
             <code>object</code>. That flexibility costs type safety: you must
             cast when reading, and value types are boxed. Prefer
-            <code>List<T></code> in new code.
+            <code>List{'<'}T{'>'}</code> in new code.
           </p>
 
           <h4>Hashtable</h4>
@@ -314,12 +314,12 @@ Console.WriteLine(ht[2]);     // Sara`}
           <p>
             Hashtable maps keys to values using hashing for fast lookup. Keys
             and values are both <code>object</code>. The modern replacement is
-            <code>Dictionary<TKey, TValue></code>.
+            <code>Dictionary{'<'}TKey, TValue{'>'}</code>.
           </p>
 
           <h3>3.2 Generic Collections (Recommended)</h3>
 
-          <h4>List<T></h4>
+          <h4>List{'<'}T{'>'}</h4>
           <CodeBlock
           language="csharp"
             code={`List<string> names = new List<string>();
@@ -339,7 +339,7 @@ Console.WriteLine($"Total students: {names.Count}");`}
           caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>
-            <code>List<T></code> is a dynamic array. Common members:
+            <code>List{'<'}T{'>'}</code> is a dynamic array. Common members:
             <code>Add</code>, <code>Insert</code>, <code>Remove</code>,
             <code>RemoveAt</code>, <code>Contains</code>, <code>IndexOf</code>,
             <code>Count</code>, <code>Clear</code>, and indexer
@@ -359,7 +359,7 @@ int index = names.IndexOf("Ahmed");
 Console.WriteLine($"Ahmed is at index {index}");`}
           caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
-          <h4>Dictionary<TKey, TValue></h4>
+          <h4>Dictionary{'<'}TKey, TValue{'>'}</h4>
           <CodeBlock
           language="csharp"
             code={`Dictionary<int, string> students = new Dictionary<int, string>();
@@ -391,7 +391,7 @@ students[104] = "Fatima";   // Add or update via indexer
 students.Remove(101);`}
           caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
-          <h4>Queue<T> (FIFO)</h4>
+          <h4>Queue{'<'}T{'>'} (FIFO)</h4>
           <CodeBlock
           language="csharp"
             code={`Queue<string> queue = new Queue<string>();
@@ -410,7 +410,7 @@ Console.WriteLine(queue.Peek());      // Sara`}
             pipelines, and breadth-first algorithms.
           </p>
 
-          <h4>Stack<T> (LIFO)</h4>
+          <h4>Stack{'<'}T{'>'} (LIFO)</h4>
           <CodeBlock
           language="csharp"
             code={`Stack<string> stack = new Stack<string>();
@@ -439,22 +439,22 @@ Console.WriteLine(stack.Peek());      // Sara`}
             </thead>
             <tbody>
               <tr>
-                <td><code>List<T></code></td>
+                <td><code>List{'<'}T{'>'}</code></td>
                 <td>Indexed sequence</td>
                 <td>General-purpose list of items</td>
               </tr>
               <tr>
-                <td><code>Dictionary<TKey,TValue></code></td>
+                <td><code>Dictionary{'<'}TKey,TValue{'>'}</code></td>
                 <td>Key → value</td>
                 <td>Fast lookup by key</td>
               </tr>
               <tr>
-                <td><code>Queue<T></code></td>
+                <td><code>Queue{'<'}T{'>'}</code></td>
                 <td>FIFO</td>
                 <td>Processing in arrival order</td>
               </tr>
               <tr>
-                <td><code>Stack<T></code></td>
+                <td><code>Stack{'<'}T{'>'}</code></td>
                 <td>LIFO</td>
                 <td>Undo, nested structures</td>
               </tr>
@@ -540,7 +540,7 @@ manager.DisplayAll();`}
           <p>Create a class <code>BankAccount</code> that raises an event when the balance falls below 1000.</p>
 
           <h3>Exercise 3</h3>
-          <p>Create a program that stores 5 student names in a <code>List<string></code> and then searches for a name entered by the user.</p>
+          <p>Create a program that stores 5 student names in a <code>List{'<'}string{'>'}</code> and then searches for a name entered by the user.</p>
 
           <h3>Exercise 4</h3>
           <p>Use a <code>Dictionary</code> to store product names and their prices. Allow the user to search for a product and display its price.</p>
@@ -553,7 +553,7 @@ manager.DisplayAll();`}
           <p>
             Design the service so that sending a notification both raises the
             event and stores a history entry. That ties together events and
-            <code>List<string></code> in one small application.
+            <code>List{'<'}string{'>'}</code> in one small application.
           </p>
 
           <ul>
@@ -561,7 +561,7 @@ manager.DisplayAll();`}
             <li>It should have an event <code>OnNotificationSent</code></li>
             <li>Create methods to send Email, SMS and Push notifications</li>
             <li>Subscribe to the event and display a confirmation message every time a notification is sent</li>
-            <li>Store all sent notifications in a <code>List<string></code></li>
+            <li>Store all sent notifications in a <code>List{'<'}string{'>'}</code></li>
           </ul>
 
           <hr />
@@ -578,7 +578,7 @@ manager.DisplayAll();`}
             <li>What is a multicast delegate?</li>
             <li>What is an event?</li>
             <li>What is the relationship between delegates and events?</li>
-            <li>What is the difference between <code>ArrayList</code> and <code>List<T></code>?</li>
+            <li>What is the difference between <code>ArrayList</code> and <code>List{'<'}T{'>'}</code>?</li>
             <li>What is the difference between <code>Queue</code> and <code>Stack</code>?</li>
             <li>Which collection is best for key-value pairs?</li>
             <li>Why are generic collections preferred over non-generic collections?</li>

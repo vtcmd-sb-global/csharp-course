@@ -473,10 +473,17 @@ Console.WriteLine(stack.Peek());      // Sara`}
 
           <CodeBlock
           language="csharp"
-            code={`public class Student
+            code={`
+            using System;
+using System.Collections.Generic;
+
+// Custom Delegate
+public delegate void StudentDelegate(string message);
+
+public class Student
 {
-    public int RollNo { get; set; }
-    public string Name { get; set; }
+    public int RollNo;
+    public string Name;
 
     public Student(int rollNo, string name)
     {
@@ -489,34 +496,41 @@ public class StudentManager
 {
     private List<Student> students = new List<Student>();
 
-    public event Action<string> StudentAdded;
+    // Event using Delegate
+    public event StudentDelegate StudentAdded;
 
     public void AddStudent(Student student)
     {
         students.Add(student);
-        StudentAdded?.Invoke($"{student.Name} has been added successfully.");
+
+        StudentAdded?.Invoke(student.Name + " added successfully!");
     }
 
     public void DisplayAll()
     {
-        Console.WriteLine("\\n----- Student List -----");
+        Console.WriteLine("\n----- Student List -----");
+
         foreach (var s in students)
         {
-            Console.WriteLine($"Roll No: {s.RollNo}, Name: {s.Name}");
+            Console.WriteLine("Roll No: " + s.RollNo + ", Name: " + s.Name);
         }
     }
 }
 
-// Testing
+// Main Program
 StudentManager manager = new StudentManager();
 
+// Subscribe to Event
 manager.StudentAdded += (message) => Console.WriteLine(message);
 
+// Add Students
 manager.AddStudent(new Student(101, "Ali"));
 manager.AddStudent(new Student(102, "Sara"));
 manager.AddStudent(new Student(103, "Ahmed"));
 
-manager.DisplayAll();`}
+// Display Students
+manager.DisplayAll();
+            `}
           caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>

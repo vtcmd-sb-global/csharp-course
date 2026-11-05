@@ -473,8 +473,7 @@ Console.WriteLine(stack.Peek());      // Sara`}
 
           <CodeBlock
           language="csharp"
-            code={`
-            using System;
+            code={`using System;
 using System.Collections.Generic;
 
 // Custom Delegate
@@ -529,8 +528,7 @@ manager.AddStudent(new Student(102, "Sara"));
 manager.AddStudent(new Student(103, "Ahmed"));
 
 // Display Students
-manager.DisplayAll();
-            `}
+manager.DisplayAll();`}
           caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
           <p>

@@ -72,32 +72,34 @@ export default function Session11() {
             <li>Click Create</li>
           </ol>
 
-          <p>
-            The dialog below shows how the <strong>Create a new project</strong> window looks when you
-            select the Windows Forms App template:
-          </p>
-
+          <p><strong>Step 1 – Start window</strong></p>
           <img 
-            src={useBaseUrl('/img/session11/vs-new-project.jpg')} 
-            alt="Visual Studio Create a new project dialog with Windows Forms App selected" 
+            src={useBaseUrl('/img/session11/vs-start-create-project.jpg')} 
+            alt="Visual Studio 2022 start window with Create a new project highlighted" 
             style={{maxWidth: '100%', border: '1px solid #ddd', borderRadius: '6px', margin: '12px 0'}}
           />
             
-          <p>You will see a form (Form1) where you can drag and drop controls.</p>
-
-          <p>
-            After the project is created, Visual Studio opens the Form Designer. On the left you
-            normally see the <strong>Toolbox</strong> (with controls such as Button, TextBox, Label,
-            DataGridView, etc.), in the center the form surface, and on the right the
-            <strong>Properties</strong> window:
-          </p>
-
+         <p><strong>Step 2 – Create a new project dialog</strong> (search for Windows Forms and select the template)</p>
           <img 
-            src={useBaseUrl('/img/session11/vs-form-designer.jpg')} 
-            alt="Visual Studio Windows Forms Designer with Toolbox, Form1 and Properties" 
+            src={useBaseUrl('/img/session11/vs-create-new-project.jpg')} 
+            alt="Visual Studio 2022 Create a new project dialog with Windows Forms App (.NET Framework) selected" 
             style={{maxWidth: '100%', border: '1px solid #ddd', borderRadius: '6px', margin: '12px 0'}}
           />
-  
+
+          <p><strong>Step 3 – Configure your new project</strong> (enter the project name and click Create)</p>
+          <img 
+            src={useBaseUrl('/img/session11/vs-configure-project.jpg')} 
+            alt="Visual Studio 2022 Configure your new project window" 
+            style={{maxWidth: '100%', border: '1px solid #ddd', borderRadius: '6px', margin: '12px 0'}}
+          />
+
+          <p>
+            After you click <strong>Create</strong>, Visual Studio opens the Windows Forms Designer.
+            You will see an empty form named <strong>Form1</strong>. On the left is the <strong>Toolbox</strong>
+            (Button, TextBox, Label, DataGridView, etc.). On the right is the <strong>Properties</strong> window.
+            Drag controls from the Toolbox onto the form and set their properties.
+          </p>
+            
           <hr />
 
           <h2>3. Common Windows Forms Controls</h2>

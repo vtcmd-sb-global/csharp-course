@@ -99,6 +99,12 @@ export default function Session11() {
             (Button, TextBox, Label, DataGridView, etc.). On the right is the <strong>Properties</strong> window.
             Drag controls from the Toolbox onto the form and set their properties.
           </p>
+              
+          <img 
+            src={useBaseUrl('/img/session11/vs-form-designer-real.jpg')} 
+            alt="Visual Studio 2022 Form Designer with Toolbox and empty Form1" 
+            style={{maxWidth: '100%', border: '1px solid #ddd', borderRadius: '6px', margin: '12px 0'}}
+          />
             
           <hr />
 
@@ -162,8 +168,21 @@ private void btnGreet_Click(object sender, EventArgs e)
 }`}
           caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
 
-          <hr />
+            <hr />
+            
+            <p>
+            After you add a Button and a Label, write the click-event code, and run the application
+            (press <strong>F5</strong> or click the green Start button), the form will show the result of your code.
+          </p>
 
+          <img 
+            src={useBaseUrl('/img/session11/vs-running-form-hello.jpg')} 
+            alt="Running Windows Forms application after adding Button and Label" 
+            style={{maxWidth: '100%', border: '1px solid #ddd', borderRadius: '6px', margin: '12px 0'}}
+          />
+
+          <hr />
+            
           <h2>4.5 Windows Forms Events</h2>
 
           <p>

@@ -212,7 +212,7 @@ Console.WriteLine("================================");`}
 
           <hr />
 
-          <h2>6. Session Challenge</h2>
+          <h2>Try It Yourself</h2>
           <p>Create a program that:</p>
           <ol>
             <li>Asks the user for their full name</li>
@@ -229,7 +229,7 @@ caption="Interactive preview: switch between themes to see the same C# snippet r
 
           <hr />
 
-          <h2>7. Session Quiz</h2>
+          <h2>Test Your Knowledge</h2>
           <ol>
             <li>What is .NET?</li>
             <li>What is the difference between .NET Framework and modern .NET?</li>

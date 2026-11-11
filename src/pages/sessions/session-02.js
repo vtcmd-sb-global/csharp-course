@@ -115,7 +115,7 @@ bool isEnrolled = true;
 int a = 20;          // unclear
 string n = "Ali";    // unclear
 double s = 45000.50; // unclear`}
-caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+caption="variable with different datatypes"/>
 
           <p>In the first example above:</p>
 
@@ -132,7 +132,7 @@ caption="Interactive preview: switch between themes to see the same C# snippet r
 string name = "Ali";
 double salary = 45000.50;
 bool isStudent = true;`}
-caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+caption="variable with different datatypes"/>
 
           <p>In the example above:</p>
 
@@ -153,7 +153,7 @@ caption="Interactive preview: switch between themes to see the same C# snippet r
           <CodeBlock
               language="csharp"
             code={`int age;`}
-            caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+            caption="normal variable declaration"/>
 
           <p>
             Here, <code>int</code> is the data type and <code>age</code> is the variable name.
@@ -173,7 +173,7 @@ caption="Interactive preview: switch between themes to see the same C# snippet r
 
 age = 20;              // now it is safe to use
 Console.WriteLine(age);`}
-caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+caption="Variable with and without value"/>
 
           <h3>Variable Initialization</h3>
 
@@ -184,7 +184,7 @@ caption="Interactive preview: switch between themes to see the same C# snippet r
           <CodeBlock
               language="csharp"
             code={`int age = 20;`}
-          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+          caption="Declaration with value"/>
 
           <p>
             This single statement both declares and initializes the variable.
@@ -205,14 +205,14 @@ age = 20;
 age = 25;
 
 Console.WriteLine(age);`}
-caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+caption="Assign value to variables"/>
 
           <p><strong>Output:</strong></p>
 
           <CodeBlock
             language="csharp"
             code={`25`}
-          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+          caption="Result"/>
 
           <p>
             Notice that the value of <code>age</code> changed from <code>20</code> to
@@ -228,7 +228,7 @@ caption="Interactive preview: switch between themes to see the same C# snippet r
 Console.WriteLine(a);
 Console.WriteLine(b);
 Console.WriteLine(c);`}
-          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+          caption="Single line multi variable declaration"/>
 
           <p>
             Although multiple variables can be declared in one statement, beginners
@@ -384,7 +384,7 @@ char grade = 'A';
 string name = "Muhammad";
 
 bool isLoggedIn = true;`}
-          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+          caption="Datatypes"/>
 
           <h3>Important: Character vs String</h3>
 
@@ -398,7 +398,7 @@ bool isLoggedIn = true;`}
             code={`char grade = 'A';
 
 string name = "Ali";`}
-caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+caption="char vs string"/>
 
           <p>
             This is incorrect:
@@ -407,7 +407,7 @@ caption="Interactive preview: switch between themes to see the same C# snippet r
           <CodeBlock
             language="csharp"
             code={`char grade = "A";`}
-          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+          caption="char vs string"/>
 
           <p>
             because <code>"A"</code> is a string, not a character.
@@ -425,7 +425,7 @@ caption="Interactive preview: switch between themes to see the same C# snippet r
             code={`var age = 20;
 var name = "Ali";
 var price = 99.99;`}
-            caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+            caption="Use of var keyword"/>
 
           <p>
             C# determines the types as:
@@ -479,7 +479,7 @@ var price = 99.99;`}
           <CodeBlock
             language="csharp"
             code={`// This is a single-line comment`}
-          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+          caption="Single-line comments"/>
 
           <h3>Multi-Line Comments</h3>
 
@@ -487,7 +487,7 @@ var price = 99.99;`}
             language="csharp"
             code={`/* This is a
    multi-line comment */`}
-          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+          caption="Multi-line comments"/>
 
           <h3>XML Documentation Comments</h3>
 
@@ -496,7 +496,7 @@ var price = 99.99;`}
             code={`/// <summary>
 /// This is an XML documentation comment.
 /// </summary>`}
-          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+          caption="XML Documentation syntax"/>
 
           <hr />
 
@@ -511,7 +511,7 @@ var price = 99.99;`}
             language="csharp"
             code={`const double PI = 3.14159;
 const int MAX_STUDENTS = 50;`} 
-          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+          caption="C# Constants"/>
 
           <hr />
 
@@ -527,7 +527,7 @@ Console.WriteLine($"Name: {name}, Age: {age}");
 
 // Composite formatting
 Console.WriteLine("Name: {0}, Age: {1}", name, age);`} 
-          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+          caption="String Interpolation and Formatting"/>
 
           <hr />
 
@@ -542,7 +542,7 @@ Console.WriteLine(a - b);  // 7
 Console.WriteLine(a * b);  // 30
 Console.WriteLine(a / b);  // 3 (integer division)
 Console.WriteLine(a % b);  // 1 (remainder)`} 
-          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+          caption="Arithmetic Operators"/>
 
           <h3>Assignment Operators</h3>
           <CodeBlock
@@ -552,7 +552,7 @@ x += 5;   // x = x + 5 → 15
 x -= 3;   // x = x - 3 → 12
 x *= 2;   // x = x * 2 → 24
 x /= 4;   // x = x / 4 → 6`} 
-          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+          caption="Assignment Operators"/>
 
           <h3>Comparison and Logical Operators</h3>
           <CodeBlock
@@ -582,7 +582,7 @@ else
 {
     Console.WriteLine("Invalid number");
 }`} 
-          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+          caption="Type conversion and Input"/>
 
           <hr />
 
@@ -629,7 +629,7 @@ else
             <li>What is the difference between <code>int</code> and <code>double</code>?</li>
             <li>How do you declare a constant in C#?</li>
             <li>What is string interpolation?</li>
-            <li>What does the <code>%</code> operator do?</li>
+            <li>What does the <code>&#37;</code> operator do?</li>
             <li>What is the difference between integer division and decimal division?</li>
             <li>Why should we prefer <code>TryParse</code> over <code>Parse</code> when reading user input?</li>
             <li>What is the difference between <code>const</code> and a normal variable?</li>

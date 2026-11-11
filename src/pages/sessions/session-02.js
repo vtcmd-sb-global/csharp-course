@@ -454,7 +454,13 @@ var price = 99.99;`}
             <strong>When to use <code>var</code>:</strong>
           </p>
           <ul>
-            <li>When the type is obvious from the right-hand side (e.g. <code>var list = new List<string>();</code>).</li>
+            <li>
+  When the type is obvious from the right-hand side, for example:
+  <CodeBlock
+    language="csharp"
+    code={`var list = new List<string>();`}
+  />
+</li>
             <li>When the type name is long and repeating it adds no clarity.</li>
           </ul>
           <p>

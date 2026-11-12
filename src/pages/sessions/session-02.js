@@ -115,7 +115,7 @@ bool isEnrolled = true;
 int a = 20;          // unclear
 string n = "Ali";    // unclear
 double s = 45000.50; // unclear`}
-caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+caption="variable naming example"/>
 
           <p>In the first example above:</p>
 
@@ -153,7 +153,7 @@ caption="Interactive preview: switch between themes to see the same C# snippet r
           <CodeBlock
               language="csharp"
             code={`int age;`}
-            caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+            caption="variable declaration"/>
 
           <p>
             Here, <code>int</code> is the data type and <code>age</code> is the variable name.
@@ -173,7 +173,7 @@ caption="Interactive preview: switch between themes to see the same C# snippet r
 
 age = 20;              // now it is safe to use
 Console.WriteLine(age);`}
-caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+caption="variable without value example"/>
 
           <h3>Variable Initialization</h3>
 
@@ -205,7 +205,7 @@ age = 20;
 age = 25;
 
 Console.WriteLine(age);`}
-caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+caption="value assigning example"/>
 
           <p><strong>Output:</strong></p>
 

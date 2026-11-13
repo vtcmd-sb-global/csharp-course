@@ -78,7 +78,7 @@ export default function Session01() {
             language="csharp"
             code={`C#     = Programming Language
               .NET   = Platform / Runtime / Libraries that run the C# code`}
-            caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+            caption="C# is the programming language; .NET is the platform and runtime that executes it."/>
 
           <h3>Important Versions</h3>
           <table>
@@ -134,7 +134,7 @@ export default function Session01() {
             language="csharp"
             code={`// See https://aka.ms/new-console-template for more information
             Console.WriteLine("Hello, World!");`}
-          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+          caption="Modern C# console app using top-level statements (default template)."/>
 
           <h3>Traditional Style (Older)</h3>
           <CodeBlock
@@ -151,7 +151,7 @@ namespace FirstProgram
         }
     }
 }`}
-caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+caption="Traditional C# program structure with namespace, class, and Main method."/>
 
           <p>Both styles work. Modern C# uses <strong>top-level statements</strong> (no need to write <code>Main</code> method explicitly).</p>
 
@@ -165,7 +165,7 @@ caption="Interactive preview: switch between themes to see the same C# snippet r
             code={`Console.WriteLine("Welcome to C# Programming");
 Console.Write("This stays on the same line");
 Console.WriteLine(" → now it moves to next line");`}
-caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+caption="Difference between Console.Write (same line) and Console.WriteLine (new line)."/>
 
           <h3>Input</h3>
           <CodeBlock
@@ -176,7 +176,7 @@ string name = Console.ReadLine();
 Console.WriteLine("Hello " + name);
 // or better
 Console.WriteLine($"Hello {name}");`}
-caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+caption="Reading user input with Console.ReadLine and using string interpolation."/>
 
           <hr />
 
@@ -208,7 +208,7 @@ Console.WriteLine($"Name : {name}");
 Console.WriteLine($"Age  : {age}");
 Console.WriteLine($"City : {city}");
 Console.WriteLine("================================");`}
-          caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+          caption="Exercise: collect name, age and city, then display formatted student information."/>
 
           <hr />
 
@@ -225,7 +225,7 @@ Console.WriteLine("================================");`}
             code={`Welcome Ali!
 You are learning C#.
 Have a great journey in programming!`}
-caption="Interactive preview: switch between themes to see the same C# snippet restyled."/>
+caption="Expected sample output for the Try It Yourself exercise."/>
 
           <hr />
 

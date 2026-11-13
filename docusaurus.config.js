@@ -1,80 +1,95 @@
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from "prism-react-renderer";
 const config = {
-  title: 'Proficient Programming with C#',
-  tagline: 'C# Course from Beginner to Advanced',
-  favicon: 'img/favicon.ico',
+  title: "Proficient Programming with C#",
+  tagline: "C# Course from Beginner to Advanced",
+  favicon: "img/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
-  future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
-  },
+  // future: {
+  //   v4: true, // Improve compatibility with the upcoming Docusaurus v4
+  // },
 
-  url: 'https://vtcmd-sb-global.github.io',
-  baseUrl: '/csharp-course/',
-  
+  url: "https://vtcmd-sb-global.github.io",
+  baseUrl: "/csharp-course/",
+
   // GitHub pages deployment config.
-  organizationName: 'vtcmd-sb-global', // GitHub org/user name.
-  projectName: 'csharp-course', // repo name.
+  organizationName: "vtcmd-sb-global", // GitHub org/user name.
+  projectName: "csharp-course", // repo name.
   trailingSlash: false,
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: false,
         blog: false,
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       }),
     ],
   ],
 
+  stylesheets: [
+    {
+      href: "https://unpkg.com/@antonz/codapi@0.20.0/dist/snippet.css",
+    },
+  ],
+
+  scripts: [
+    {
+      src: "https://unpkg.com/@antonz/codapi@0.20.0/dist/snippet.js",
+      defer: true,
+    },
+  ],
+
+  clientModules: ["./src/clientModules/codapiReset.js"],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with project's social card
-      image: 'img/social-card.jpg',
+      image: "img/social-card.jpg",
       metadata: [
         {
-          name: 'description',
+          name: "description",
           content:
-            'Free C# programming course for beginners. Learn C# fundamentals, OOP, LINQ, SQL Server, ASP.NET Core, Web API and professional application development.'
+            "Free C# programming course for beginners. Learn C# fundamentals, OOP, LINQ, SQL Server, ASP.NET Core, Web API and professional application development.",
         },
         {
-          name: 'keywords',
+          name: "keywords",
           content:
-            'C#, C Sharp, C# tutorial, learn C#, C# beginners, C# programming, .NET, ASP.NET Core'
-        }
+            "C#, C Sharp, C# tutorial, learn C#, C# beginners, C# programming, .NET, ASP.NET Core",
+        },
       ],
       colorMode: {
-        defaultMode: 'light',
+        defaultMode: "light",
         disableSwitch: false,
         respectPrefersColorScheme: false,
-      },     
+      },
       navbar: {
-        title: 'Proficient Programming with C#',
+        title: "Proficient Programming with C#",
         logo: {
-          alt: 'C# Course Logo',
-          src: 'img/logo.jpg', // optional – remove if you don’t have a logo
+          alt: "C# Course Logo",
+          src: "img/logo.jpg", // optional – remove if you don’t have a logo
         },
         items: [
           {
-            to: '/',
-            label: 'Home',
-            position: 'left',
+            to: "/",
+            label: "Home",
+            position: "left",
           },
           {
-            to: '/sessions/session-01',
-            label: 'Sessions',
-            position: 'left',
+            to: "/sessions/session-01",
+            label: "Sessions",
+            position: "left",
           },
           //{
           //  to: '/exercises/session-01',
@@ -84,7 +99,7 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [],
         copyright: `Copyright © ${new Date().getFullYear()} Student's Guide for Proficient Programming with C#, Sir Aousaja.`,
       },

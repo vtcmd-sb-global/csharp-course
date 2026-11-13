@@ -244,7 +244,10 @@ finally
             happens inside <code>try</code> or <code>catch</code>,
             <code>finally</code> still runs. For types that implement
             <code>IDisposable</code>, prefer a <code>using</code> statement,
-            which is syntactic sugar for try/finally with Dispose.
+            which is syntactic sugar for a <code>try/finally</code> block that
+            automatically calls <code>Dispose</code>.This guarantees unmanaged 
+            resources like file handles, network streams, and database connections 
+            are released immediately—even if an exception is thrown inside the block.
           </p>
 
           <CodeBlock
@@ -257,6 +260,45 @@ using (var reader = new StreamReader("data.txt"))
 } // reader.Dispose() is called here automatically`}
           caption="using statement automatically calls Dispose (try/finally)"/>
 
+          <h2>Modern Alternative: <code>using</code> Declaration (C# 8+)</h2>
+          <p>
+            When you want the resource to stay alive until the end of the 
+            current enclosing scope (such as a method or <code>if</code> block), 
+            omit the curly braces to avoid extra nesting
+          </p>
+
+          <CodeBlock
+              language="csharp"
+                code={`void ReadFirstLine()
+{
+    using var reader = new StreamReader("data.txt");
+    string line = reader.ReadLine();
+    Console.WriteLine(line);
+} // reader.Dispose() is called automatically when the method exits`}
+caption="using statement automatically calls Dispose (try/finally)"/>
+
+          <h2>What the Compiler Generates:</h2>
+          <p>
+            Under the hood, the <code>C#</code> compiler lowers both forms into an explicit <code>try/finally</code> block:
+          </p>
+
+          <CodeBlock
+  language="csharp"
+    code={`var reader = new StreamReader("data.txt");
+try
+{
+    string line = reader.ReadLine();
+    Console.WriteLine(line);
+}
+finally
+{
+    if (reader != null)
+    {
+        ((IDisposable)reader).Dispose();
+    }
+}`}
+caption="compiler under the hood generates the above"/>
+          
           <hr />
 
           <h2>3. Throwing Exceptions</h2>
